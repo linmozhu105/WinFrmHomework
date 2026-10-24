@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37628.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsLibrarySystem", "WindowsFormsLibrarySystem\WindowsFormsLibrarySystem.csproj", "{A06CD4AC-B3D9-40EB-973D-DAE519791AE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFrmHomework", "WinFrmHomework\WinFrmHomework.csproj", "{95F55891-5149-4D40-9D49-DDBD0311812D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A06CD4AC-B3D9-40EB-973D-DAE519791AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06CD4AC-B3D9-40EB-973D-DAE519791AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06CD4AC-B3D9-40EB-973D-DAE519791AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06CD4AC-B3D9-40EB-973D-DAE519791AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F55891-5149-4D40-9D49-DDBD0311812D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F55891-5149-4D40-9D49-DDBD0311812D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F55891-5149-4D40-9D49-DDBD0311812D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F55891-5149-4D40-9D49-DDBD0311812D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E9A1316-FA04-4B0F-B019-F42A1FFF9447}
+	EndGlobalSection
+EndGlobal

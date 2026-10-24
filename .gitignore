@@ -1,0 +1,20 @@
+## Visual Studio 生成文件
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## 编译产物
+[Dd]ebug/
+[Rr]elease/
+*.exe
+*.dll
+*.pdb
+
+## 系统文件
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
