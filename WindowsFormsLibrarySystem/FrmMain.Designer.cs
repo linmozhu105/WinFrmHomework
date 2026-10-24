@@ -80,7 +80,6 @@ namespace WindowsFormsLibrarySystem
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.lblPublisher = new System.Windows.Forms.Label();
             this.cboPublisher = new System.Windows.Forms.ComboBox();
-            this.lblCount = new System.Windows.Forms.Label();
             this.gbList = new System.Windows.Forms.GroupBox();
             this.tlpList = new System.Windows.Forms.TableLayoutPanel();
             this.pnlListTool = new System.Windows.Forms.Panel();
@@ -258,19 +257,19 @@ namespace WindowsFormsLibrarySystem
             // mnuBorrowIn
             // 
             this.mnuBorrowIn.Name = "mnuBorrowIn";
-            this.mnuBorrowIn.Size = new System.Drawing.Size(224, 26);
+            this.mnuBorrowIn.Size = new System.Drawing.Size(174, 26);
             this.mnuBorrowIn.Text = "借书登记(&B)";
             // 
             // mnuBorrowOut
             // 
             this.mnuBorrowOut.Name = "mnuBorrowOut";
-            this.mnuBorrowOut.Size = new System.Drawing.Size(224, 26);
+            this.mnuBorrowOut.Size = new System.Drawing.Size(174, 26);
             this.mnuBorrowOut.Text = "还书登记(&R)";
             // 
             // mnuBorrowOverdue
             // 
             this.mnuBorrowOverdue.Name = "mnuBorrowOverdue";
-            this.mnuBorrowOverdue.Size = new System.Drawing.Size(224, 26);
+            this.mnuBorrowOverdue.Size = new System.Drawing.Size(174, 26);
             this.mnuBorrowOverdue.Text = "逾期催还(&O)";
             // 
             // mnuHelp
@@ -480,6 +479,14 @@ namespace WindowsFormsLibrarySystem
             this.gbUser.TabStop = false;
             this.gbUser.Text = "当前用户";
             // 
+            // lblUserInfo
+            // 
+            this.lblUserInfo.Location = new System.Drawing.Point(74, 28);
+            this.lblUserInfo.Name = "lblUserInfo";
+            this.lblUserInfo.Size = new System.Drawing.Size(116, 52);
+            this.lblUserInfo.TabIndex = 0;
+            this.lblUserInfo.Text = "管理员：admin\r\n角色：系统管理员";
+            // 
             // picAvatar
             // 
             this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
@@ -490,14 +497,6 @@ namespace WindowsFormsLibrarySystem
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAvatar.TabIndex = 1;
             this.picAvatar.TabStop = false;
-            // 
-            // lblUserInfo
-            // 
-            this.lblUserInfo.Location = new System.Drawing.Point(74, 28);
-            this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(116, 52);
-            this.lblUserInfo.TabIndex = 0;
-            this.lblUserInfo.Text = "管理员：admin\r\n角色：系统管理员";
             // 
             // tlpRight
             // 
@@ -531,11 +530,11 @@ namespace WindowsFormsLibrarySystem
             // tlpQuery
             // 
             this.tlpQuery.ColumnCount = 6;
-            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tlpQuery.Controls.Add(this.lblBookName, 0, 0);
             this.tlpQuery.Controls.Add(this.txtBookName, 1, 0);
@@ -547,7 +546,6 @@ namespace WindowsFormsLibrarySystem
             this.tlpQuery.Controls.Add(this.txtAuthor, 1, 1);
             this.tlpQuery.Controls.Add(this.lblPublisher, 2, 1);
             this.tlpQuery.Controls.Add(this.cboPublisher, 3, 1);
-            this.tlpQuery.Controls.Add(this.lblCount, 5, 1);
             this.tlpQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpQuery.Location = new System.Drawing.Point(3, 23);
             this.tlpQuery.Name = "tlpQuery";
@@ -590,7 +588,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(378, 11);
+            this.cboCategory.Location = new System.Drawing.Point(378, 14);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(239, 28);
             this.cboCategory.TabIndex = 3;
@@ -646,7 +644,7 @@ namespace WindowsFormsLibrarySystem
             this.lblPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPublisher.Location = new System.Drawing.Point(316, 50);
             this.lblPublisher.Name = "lblPublisher";
-            this.lblPublisher.Size = new System.Drawing.Size(56, 20);
+            this.lblPublisher.Size = new System.Drawing.Size(68, 20);
             this.lblPublisher.TabIndex = 8;
             this.lblPublisher.Text = "出版社：";
             this.lblPublisher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -655,21 +653,10 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(378, 46);
+            this.cboPublisher.Location = new System.Drawing.Point(378, 49);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(239, 28);
             this.cboPublisher.TabIndex = 9;
-            // 
-            // lblCount
-            // 
-            this.lblCount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCount.Location = new System.Drawing.Point(685, 50);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(144, 20);
-            this.lblCount.TabIndex = 10;
-            this.lblCount.Text = "记录数：0";
-            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCount.Visible = false;
             // 
             // gbList
             // 
@@ -787,7 +774,7 @@ namespace WindowsFormsLibrarySystem
             this.dgvBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -992,7 +979,7 @@ namespace WindowsFormsLibrarySystem
             // tslClock
             // 
             this.tslClock.Name = "tslClock";
-            this.tslClock.Size = new System.Drawing.Size(762, 20);
+            this.tslClock.Size = new System.Drawing.Size(801, 20);
             this.tslClock.Spring = true;
             this.tslClock.Text = "日期时间：";
             // 
@@ -1030,8 +1017,8 @@ namespace WindowsFormsLibrarySystem
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.flowNav.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.gbUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.tlpRight.ResumeLayout(false);
             this.gbQuery.ResumeLayout(false);
             this.tlpQuery.ResumeLayout(false);
@@ -1101,7 +1088,6 @@ namespace WindowsFormsLibrarySystem
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.Label lblPublisher;
         private System.Windows.Forms.ComboBox cboPublisher;
-        private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.GroupBox gbList;
         private System.Windows.Forms.TableLayoutPanel tlpList;
         private System.Windows.Forms.Panel pnlListTool;
