@@ -75,7 +75,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pnlRecord);
             this.splitContainer1.Size = new System.Drawing.Size(1060, 700);
-            this.splitContainer1.SplitterDistance = 450;
+            this.splitContainer1.SplitterDistance = 390;
             this.splitContainer1.SplitterWidth = 16;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -95,7 +95,7 @@
             this.pnlLoss.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLoss.Location = new System.Drawing.Point(0, 0);
             this.pnlLoss.Name = "pnlLoss";
-            this.pnlLoss.Size = new System.Drawing.Size(450, 700);
+            this.pnlLoss.Size = new System.Drawing.Size(390, 700);
             this.pnlLoss.TabIndex = 0;
             // 
             // lblLossTitle
@@ -120,9 +120,11 @@
             // 
             // txtCardNo
             // 
+            this.txtCardNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCardNo.Location = new System.Drawing.Point(120, 88);
             this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(300, 25);
+            this.txtCardNo.Size = new System.Drawing.Size(270, 25);
             this.txtCardNo.TabIndex = 2;
             // 
             // lblName
@@ -137,10 +139,12 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(120, 148);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(300, 25);
+            this.txtName.Size = new System.Drawing.Size(270, 25);
             this.txtName.TabIndex = 4;
             this.txtName.TabStop = false;
             // 
@@ -156,10 +160,12 @@
             // txtType
             // 
             this.txtType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.txtType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtType.Location = new System.Drawing.Point(120, 208);
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(300, 25);
+            this.txtType.Size = new System.Drawing.Size(270, 25);
             this.txtType.TabIndex = 6;
             this.txtType.TabStop = false;
             // 
@@ -174,11 +180,13 @@
             // 
             // txtReason
             // 
+            this.txtReason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReason.Location = new System.Drawing.Point(120, 264);
             this.txtReason.Multiline = true;
             this.txtReason.Name = "txtReason";
             this.txtReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtReason.Size = new System.Drawing.Size(300, 170);
+            this.txtReason.Size = new System.Drawing.Size(270, 170);
             this.txtReason.TabIndex = 8;
             // 
             // btnLoss
@@ -187,7 +195,7 @@
             this.btnLoss.FlatAppearance.BorderSize = 0;
             this.btnLoss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoss.ForeColor = System.Drawing.Color.White;
-            this.btnLoss.Location = new System.Drawing.Point(156, 470);
+            this.btnLoss.Location = new System.Drawing.Point(129, 470);
             this.btnLoss.Name = "btnLoss";
             this.btnLoss.Size = new System.Drawing.Size(132, 42);
             this.btnLoss.TabIndex = 9;
@@ -202,7 +210,7 @@
             this.pnlRecord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRecord.Location = new System.Drawing.Point(0, 0);
             this.pnlRecord.Name = "pnlRecord";
-            this.pnlRecord.Size = new System.Drawing.Size(594, 700);
+            this.pnlRecord.Size = new System.Drawing.Size(654, 700);
             this.pnlRecord.TabIndex = 0;
             // 
             // lblRecordTitle
@@ -226,6 +234,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoss.BackgroundColor = System.Drawing.Color.White;
             this.dgvLoss.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLoss.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvLoss.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
@@ -233,7 +242,7 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLoss.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLoss.ColumnHeadersHeight = 42;
             this.dgvLoss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -260,45 +269,40 @@
             this.dgvLoss.RowHeadersVisible = false;
             this.dgvLoss.RowTemplate.Height = 40;
             this.dgvLoss.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoss.Size = new System.Drawing.Size(550, 616);
+            this.dgvLoss.Size = new System.Drawing.Size(580, 616);
             this.dgvLoss.TabIndex = 1;
             // 
             // colNo
             // 
-            this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNo.FillWeight = 65F;
+            this.colNo.Width = 52;
             this.colNo.HeaderText = "序号";
             this.colNo.Name = "colNo";
             this.colNo.ReadOnly = true;
             // 
             // colCardNo
             // 
-            this.colCardNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCardNo.FillWeight = 130F;
+            this.colCardNo.Width = 104;
             this.colCardNo.HeaderText = "证件号";
             this.colCardNo.Name = "colCardNo";
             this.colCardNo.ReadOnly = true;
             // 
             // colName
             // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.FillWeight = 90F;
+            this.colName.Width = 74;
             this.colName.HeaderText = "姓名";
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
             // 
             // colLossTime
             // 
-            this.colLossTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colLossTime.FillWeight = 150F;
+            this.colLossTime.Width = 112;
             this.colLossTime.HeaderText = "挂失时间";
             this.colLossTime.Name = "colLossTime";
             this.colLossTime.ReadOnly = true;
             // 
             // colState
             // 
-            this.colState.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colState.FillWeight = 100F;
+            this.colState.Width = 84;
             this.colState.HeaderText = "状态";
             this.colState.Name = "colState";
             this.colState.ReadOnly = true;
@@ -311,7 +315,7 @@
             this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MinimumSize = new System.Drawing.Size(960, 620);
+            this.MinimumSize = new System.Drawing.Size(820, 560);
             this.Name = "FrmReaderLoss";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
