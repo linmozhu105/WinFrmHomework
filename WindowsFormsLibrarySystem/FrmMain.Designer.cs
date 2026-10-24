@@ -208,19 +208,19 @@ namespace WindowsFormsLibrarySystem
             // mnuBookIn
             // 
             this.mnuBookIn.Name = "mnuBookIn";
-            this.mnuBookIn.Size = new System.Drawing.Size(172, 26);
+            this.mnuBookIn.Size = new System.Drawing.Size(224, 26);
             this.mnuBookIn.Text = "图书入库(&I)";
             // 
             // mnuBookCategory
             // 
             this.mnuBookCategory.Name = "mnuBookCategory";
-            this.mnuBookCategory.Size = new System.Drawing.Size(172, 26);
+            this.mnuBookCategory.Size = new System.Drawing.Size(224, 26);
             this.mnuBookCategory.Text = "图书分类(&C)";
             // 
             // mnuBookCheck
             // 
             this.mnuBookCheck.Name = "mnuBookCheck";
-            this.mnuBookCheck.Size = new System.Drawing.Size(172, 26);
+            this.mnuBookCheck.Size = new System.Drawing.Size(224, 26);
             this.mnuBookCheck.Text = "图书盘点(&S)";
             // 
             // mnuReader
@@ -559,7 +559,7 @@ namespace WindowsFormsLibrarySystem
             // lblBookName
             // 
             this.lblBookName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblBookName.Location = new System.Drawing.Point(9, 15);
+            this.lblBookName.Location = new System.Drawing.Point(14, 15);
             this.lblBookName.Name = "lblBookName";
             this.lblBookName.Size = new System.Drawing.Size(56, 20);
             this.lblBookName.TabIndex = 0;
@@ -569,9 +569,9 @@ namespace WindowsFormsLibrarySystem
             // txtBookName
             // 
             this.txtBookName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBookName.Location = new System.Drawing.Point(71, 12);
+            this.txtBookName.Location = new System.Drawing.Point(81, 12);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(239, 27);
+            this.txtBookName.Size = new System.Drawing.Size(224, 27);
             this.txtBookName.TabIndex = 1;
             // 
             // lblCategory
@@ -588,9 +588,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(378, 14);
+            this.cboCategory.Location = new System.Drawing.Point(383, 14);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(239, 28);
+            this.cboCategory.Size = new System.Drawing.Size(224, 28);
             this.cboCategory.TabIndex = 3;
             // 
             // btnQuery
@@ -600,9 +600,9 @@ namespace WindowsFormsLibrarySystem
             this.btnQuery.FlatAppearance.BorderSize = 0;
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnQuery.Location = new System.Drawing.Point(623, 11);
+            this.btnQuery.Location = new System.Drawing.Point(613, 11);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(56, 28);
+            this.btnQuery.Size = new System.Drawing.Size(66, 28);
             this.btnQuery.TabIndex = 4;
             this.btnQuery.Text = "查询";
             this.btnQuery.UseVisualStyleBackColor = false;
@@ -624,7 +624,7 @@ namespace WindowsFormsLibrarySystem
             // lblAuthor
             // 
             this.lblAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAuthor.Location = new System.Drawing.Point(9, 50);
+            this.lblAuthor.Location = new System.Drawing.Point(14, 50);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(56, 20);
             this.lblAuthor.TabIndex = 6;
@@ -634,17 +634,17 @@ namespace WindowsFormsLibrarySystem
             // txtAuthor
             // 
             this.txtAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAuthor.Location = new System.Drawing.Point(71, 47);
+            this.txtAuthor.Location = new System.Drawing.Point(81, 47);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(239, 27);
+            this.txtAuthor.Size = new System.Drawing.Size(224, 27);
             this.txtAuthor.TabIndex = 7;
             // 
             // lblPublisher
             // 
             this.lblPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPublisher.Location = new System.Drawing.Point(316, 50);
+            this.lblPublisher.Location = new System.Drawing.Point(311, 50);
             this.lblPublisher.Name = "lblPublisher";
-            this.lblPublisher.Size = new System.Drawing.Size(68, 20);
+            this.lblPublisher.Size = new System.Drawing.Size(66, 20);
             this.lblPublisher.TabIndex = 8;
             this.lblPublisher.Text = "出版社：";
             this.lblPublisher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -653,9 +653,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(378, 49);
+            this.cboPublisher.Location = new System.Drawing.Point(383, 49);
             this.cboPublisher.Name = "cboPublisher";
-            this.cboPublisher.Size = new System.Drawing.Size(239, 28);
+            this.cboPublisher.Size = new System.Drawing.Size(224, 28);
             this.cboPublisher.TabIndex = 9;
             // 
             // gbList

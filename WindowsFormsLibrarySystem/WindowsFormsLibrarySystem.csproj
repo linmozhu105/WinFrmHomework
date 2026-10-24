@@ -64,6 +64,24 @@
     <Compile Include="FrmChangePwd.Designer.cs">
       <DependentUpon>FrmChangePwd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBookIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookIn.Designer.cs">
+      <DependentUpon>FrmBookIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookCategory.Designer.cs">
+      <DependentUpon>FrmBookCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookCheck.Designer.cs">
+      <DependentUpon>FrmBookCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMain.resx">
@@ -74,6 +92,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChangePwd.resx">
       <DependentUpon>FrmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookIn.resx">
+      <DependentUpon>FrmBookIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookCategory.resx">
+      <DependentUpon>FrmBookCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookCheck.resx">
+      <DependentUpon>FrmBookCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
