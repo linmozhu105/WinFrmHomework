@@ -588,7 +588,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(383, 11);
+            this.cboCategory.Location = new System.Drawing.Point(383, 14);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(224, 28);
             this.cboCategory.TabIndex = 3;
@@ -653,7 +653,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(383, 46);
+            this.cboPublisher.Location = new System.Drawing.Point(383, 49);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(224, 28);
             this.cboPublisher.TabIndex = 9;

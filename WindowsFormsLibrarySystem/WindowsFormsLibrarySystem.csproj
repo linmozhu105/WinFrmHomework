@@ -94,6 +94,24 @@
     <Compile Include="FrmReaderLoss.Designer.cs">
       <DependentUpon>FrmReaderLoss.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBorrowRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBorrowRegister.Designer.cs">
+      <DependentUpon>FrmBorrowRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReturnBook.Designer.cs">
+      <DependentUpon>FrmReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOverdue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOverdue.Designer.cs">
+      <DependentUpon>FrmOverdue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMain.resx">
@@ -119,6 +137,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReaderLoss.resx">
       <DependentUpon>FrmReaderLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBorrowRegister.resx">
+      <DependentUpon>FrmBorrowRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReturnBook.resx">
+      <DependentUpon>FrmReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOverdue.resx">
+      <DependentUpon>FrmOverdue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
