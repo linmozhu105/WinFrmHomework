@@ -29,6 +29,7 @@ namespace WindowsFormsLibrarySystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRoot = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuSystem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +66,7 @@ namespace WindowsFormsLibrarySystem
             this.btnNavSetting = new System.Windows.Forms.Button();
             this.gbUser = new System.Windows.Forms.GroupBox();
             this.lblUserInfo = new System.Windows.Forms.Label();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.tlpRight = new System.Windows.Forms.TableLayoutPanel();
             this.gbQuery = new System.Windows.Forms.GroupBox();
             this.tlpQuery = new System.Windows.Forms.TableLayoutPanel();
@@ -117,6 +119,7 @@ namespace WindowsFormsLibrarySystem
             this.splitContainer1.SuspendLayout();
             this.flowNav.SuspendLayout();
             this.gbUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.tlpRight.SuspendLayout();
             this.gbQuery.SuspendLayout();
             this.tlpQuery.SuspendLayout();
@@ -161,7 +164,7 @@ namespace WindowsFormsLibrarySystem
             this.mnuHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,7 +175,7 @@ namespace WindowsFormsLibrarySystem
             this.mnuChangePwd,
             this.mnuExit});
             this.mnuSystem.Name = "mnuSystem";
-            this.mnuSystem.Size = new System.Drawing.Size(72, 26);
+            this.mnuSystem.Size = new System.Drawing.Size(72, 28);
             this.mnuSystem.Text = "系统(&S)";
             // 
             // mnuUserManage
@@ -200,7 +203,7 @@ namespace WindowsFormsLibrarySystem
             this.mnuBookCategory,
             this.mnuBookCheck});
             this.mnuBook.Name = "mnuBook";
-            this.mnuBook.Size = new System.Drawing.Size(102, 26);
+            this.mnuBook.Size = new System.Drawing.Size(102, 28);
             this.mnuBook.Text = "图书管理(&B)";
             // 
             // mnuBookIn
@@ -227,7 +230,7 @@ namespace WindowsFormsLibrarySystem
             this.mnuReaderFile,
             this.mnuReaderLoss});
             this.mnuReader.Name = "mnuReader";
-            this.mnuReader.Size = new System.Drawing.Size(103, 26);
+            this.mnuReader.Size = new System.Drawing.Size(103, 28);
             this.mnuReader.Text = "读者管理(&R)";
             // 
             // mnuReaderFile
@@ -249,19 +252,19 @@ namespace WindowsFormsLibrarySystem
             this.mnuBorrowOut,
             this.mnuBorrowOverdue});
             this.mnuBorrow.Name = "mnuBorrow";
-            this.mnuBorrow.Size = new System.Drawing.Size(101, 26);
+            this.mnuBorrow.Size = new System.Drawing.Size(101, 28);
             this.mnuBorrow.Text = "借阅管理(&L)";
             // 
             // mnuBorrowIn
             // 
             this.mnuBorrowIn.Name = "mnuBorrowIn";
-            this.mnuBorrowIn.Size = new System.Drawing.Size(174, 26);
+            this.mnuBorrowIn.Size = new System.Drawing.Size(224, 26);
             this.mnuBorrowIn.Text = "借书登记(&B)";
             // 
             // mnuBorrowOut
             // 
             this.mnuBorrowOut.Name = "mnuBorrowOut";
-            this.mnuBorrowOut.Size = new System.Drawing.Size(174, 26);
+            this.mnuBorrowOut.Size = new System.Drawing.Size(224, 26);
             this.mnuBorrowOut.Text = "还书登记(&R)";
             // 
             // mnuBorrowOverdue
@@ -275,7 +278,7 @@ namespace WindowsFormsLibrarySystem
             this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAbout});
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(75, 26);
+            this.mnuHelp.Size = new System.Drawing.Size(75, 28);
             this.mnuHelp.Text = "帮助(&H)";
             // 
             // mnuAbout
@@ -286,8 +289,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.BackColor = System.Drawing.Color.White;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -297,10 +300,10 @@ namespace WindowsFormsLibrarySystem
             this.tsbReader,
             this.tsbStat,
             this.tsbSetting});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 32);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.toolStrip1.Size = new System.Drawing.Size(1080, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1080, 36);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -308,49 +311,49 @@ namespace WindowsFormsLibrarySystem
             // 
             this.tsbBookIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbBookIn.Name = "tsbBookIn";
-            this.tsbBookIn.Size = new System.Drawing.Size(73, 25);
+            this.tsbBookIn.Size = new System.Drawing.Size(73, 29);
             this.tsbBookIn.Text = "图书入库";
             // 
             // tsbBorrow
             // 
             this.tsbBorrow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbBorrow.Name = "tsbBorrow";
-            this.tsbBorrow.Size = new System.Drawing.Size(73, 25);
+            this.tsbBorrow.Size = new System.Drawing.Size(73, 29);
             this.tsbBorrow.Text = "借书登记";
             // 
             // tsbReturn
             // 
             this.tsbReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbReturn.Name = "tsbReturn";
-            this.tsbReturn.Size = new System.Drawing.Size(73, 25);
+            this.tsbReturn.Size = new System.Drawing.Size(73, 29);
             this.tsbReturn.Text = "还书登记";
             // 
             // tsbReader
             // 
             this.tsbReader.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbReader.Name = "tsbReader";
-            this.tsbReader.Size = new System.Drawing.Size(73, 25);
+            this.tsbReader.Size = new System.Drawing.Size(73, 29);
             this.tsbReader.Text = "读者管理";
             // 
             // tsbStat
             // 
             this.tsbStat.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbStat.Name = "tsbStat";
-            this.tsbStat.Size = new System.Drawing.Size(73, 25);
+            this.tsbStat.Size = new System.Drawing.Size(73, 29);
             this.tsbStat.Text = "数据统计";
             // 
             // tsbSetting
             // 
             this.tsbSetting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbSetting.Name = "tsbSetting";
-            this.tsbSetting.Size = new System.Drawing.Size(73, 25);
+            this.tsbSetting.Size = new System.Drawing.Size(73, 29);
             this.tsbSetting.Text = "系统设置";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 65);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 71);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -362,7 +365,7 @@ namespace WindowsFormsLibrarySystem
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tlpRight);
-            this.splitContainer1.Size = new System.Drawing.Size(1074, 626);
+            this.splitContainer1.Size = new System.Drawing.Size(1074, 620);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -381,7 +384,7 @@ namespace WindowsFormsLibrarySystem
             this.flowNav.Location = new System.Drawing.Point(0, 0);
             this.flowNav.Name = "flowNav";
             this.flowNav.Padding = new System.Windows.Forms.Padding(12, 14, 12, 12);
-            this.flowNav.Size = new System.Drawing.Size(200, 530);
+            this.flowNav.Size = new System.Drawing.Size(200, 524);
             this.flowNav.TabIndex = 0;
             this.flowNav.WrapContents = false;
             // 
@@ -389,9 +392,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavBook.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavBook.Location = new System.Drawing.Point(12, 17);
+            this.btnNavBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavBook.Location = new System.Drawing.Point(15, 17);
             this.btnNavBook.Name = "btnNavBook";
             this.btnNavBook.Size = new System.Drawing.Size(176, 40);
             this.btnNavBook.TabIndex = 0;
@@ -402,9 +405,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavReader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavReader.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavReader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavReader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavReader.Location = new System.Drawing.Point(12, 63);
+            this.btnNavReader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavReader.Location = new System.Drawing.Point(15, 63);
             this.btnNavReader.Name = "btnNavReader";
             this.btnNavReader.Size = new System.Drawing.Size(176, 40);
             this.btnNavReader.TabIndex = 1;
@@ -415,9 +418,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavBorrow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavBorrow.Location = new System.Drawing.Point(12, 109);
+            this.btnNavBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavBorrow.Location = new System.Drawing.Point(15, 109);
             this.btnNavBorrow.Name = "btnNavBorrow";
             this.btnNavBorrow.Size = new System.Drawing.Size(176, 40);
             this.btnNavBorrow.TabIndex = 2;
@@ -428,9 +431,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavReturn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavReturn.Location = new System.Drawing.Point(12, 155);
+            this.btnNavReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavReturn.Location = new System.Drawing.Point(15, 155);
             this.btnNavReturn.Name = "btnNavReturn";
             this.btnNavReturn.Size = new System.Drawing.Size(176, 40);
             this.btnNavReturn.TabIndex = 3;
@@ -441,9 +444,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavSearch.Location = new System.Drawing.Point(12, 201);
+            this.btnNavSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavSearch.Location = new System.Drawing.Point(15, 201);
             this.btnNavSearch.Name = "btnNavSearch";
             this.btnNavSearch.Size = new System.Drawing.Size(176, 40);
             this.btnNavSearch.TabIndex = 4;
@@ -454,9 +457,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnNavSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNavSetting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btnNavSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavSetting.Location = new System.Drawing.Point(12, 247);
+            this.btnNavSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNavSetting.Location = new System.Drawing.Point(15, 247);
             this.btnNavSetting.Name = "btnNavSetting";
             this.btnNavSetting.Size = new System.Drawing.Size(176, 40);
             this.btnNavSetting.TabIndex = 5;
@@ -465,10 +468,11 @@ namespace WindowsFormsLibrarySystem
             // 
             // gbUser
             // 
-            this.gbUser.Controls.Add(this.lblUserInfo);
             this.gbUser.BackColor = System.Drawing.Color.White;
+            this.gbUser.Controls.Add(this.lblUserInfo);
+            this.gbUser.Controls.Add(this.picAvatar);
             this.gbUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbUser.Location = new System.Drawing.Point(0, 530);
+            this.gbUser.Location = new System.Drawing.Point(0, 524);
             this.gbUser.Name = "gbUser";
             this.gbUser.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.gbUser.Size = new System.Drawing.Size(200, 96);
@@ -476,17 +480,28 @@ namespace WindowsFormsLibrarySystem
             this.gbUser.TabStop = false;
             this.gbUser.Text = "当前用户";
             // 
+            // picAvatar
+            // 
+            this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(234)))), ((int)(((byte)(246)))));
+            this.picAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picAvatar.Location = new System.Drawing.Point(14, 26);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(52, 52);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 1;
+            this.picAvatar.TabStop = false;
+            // 
             // lblUserInfo
             // 
-            this.lblUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblUserInfo.Location = new System.Drawing.Point(8, 26);
+            this.lblUserInfo.Location = new System.Drawing.Point(74, 28);
             this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(184, 64);
+            this.lblUserInfo.Size = new System.Drawing.Size(116, 52);
             this.lblUserInfo.TabIndex = 0;
             this.lblUserInfo.Text = "管理员：admin\r\n角色：系统管理员";
             // 
             // tlpRight
             // 
+            this.tlpRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.tlpRight.ColumnCount = 1;
             this.tlpRight.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRight.Controls.Add(this.gbQuery, 0, 0);
@@ -494,23 +509,22 @@ namespace WindowsFormsLibrarySystem
             this.tlpRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpRight.Location = new System.Drawing.Point(0, 0);
             this.tlpRight.Name = "tlpRight";
-            this.tlpRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.tlpRight.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
             this.tlpRight.RowCount = 2;
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpRight.Size = new System.Drawing.Size(870, 626);
+            this.tlpRight.Size = new System.Drawing.Size(870, 620);
             this.tlpRight.TabIndex = 0;
             // 
             // gbQuery
             // 
+            this.gbQuery.BackColor = System.Drawing.Color.White;
             this.gbQuery.Controls.Add(this.tlpQuery);
             this.gbQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbQuery.Location = new System.Drawing.Point(13, 11);
             this.gbQuery.Name = "gbQuery";
             this.gbQuery.Size = new System.Drawing.Size(844, 110);
             this.gbQuery.TabIndex = 0;
-            this.gbQuery.BackColor = System.Drawing.Color.White;
             this.gbQuery.TabStop = false;
             this.gbQuery.Text = "查询条件";
             // 
@@ -576,7 +590,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(378, 14);
+            this.cboCategory.Location = new System.Drawing.Point(378, 11);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(239, 28);
             this.cboCategory.TabIndex = 3;
@@ -586,8 +600,8 @@ namespace WindowsFormsLibrarySystem
             this.btnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.btnQuery.FlatAppearance.BorderSize = 0;
-            this.btnQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQuery.Location = new System.Drawing.Point(623, 11);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(56, 28);
@@ -600,8 +614,8 @@ namespace WindowsFormsLibrarySystem
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.btnReset.Location = new System.Drawing.Point(685, 11);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(144, 28);
@@ -641,7 +655,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(378, 49);
+            this.cboPublisher.Location = new System.Drawing.Point(378, 46);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(239, 28);
             this.cboPublisher.TabIndex = 9;
@@ -654,18 +668,18 @@ namespace WindowsFormsLibrarySystem
             this.lblCount.Size = new System.Drawing.Size(144, 20);
             this.lblCount.TabIndex = 10;
             this.lblCount.Text = "记录数：0";
-            this.lblCount.Visible = false;
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCount.Visible = false;
             // 
             // gbList
             // 
+            this.gbList.BackColor = System.Drawing.Color.White;
             this.gbList.Controls.Add(this.tlpList);
             this.gbList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbList.Location = new System.Drawing.Point(13, 127);
             this.gbList.Name = "gbList";
-            this.gbList.Size = new System.Drawing.Size(844, 488);
+            this.gbList.Size = new System.Drawing.Size(844, 482);
             this.gbList.TabIndex = 1;
-            this.gbList.BackColor = System.Drawing.Color.White;
             this.gbList.TabStop = false;
             this.gbList.Text = "图书列表";
             // 
@@ -684,7 +698,7 @@ namespace WindowsFormsLibrarySystem
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpList.Size = new System.Drawing.Size(838, 462);
+            this.tlpList.Size = new System.Drawing.Size(838, 456);
             this.tlpList.TabIndex = 0;
             // 
             // pnlListTool
@@ -699,12 +713,12 @@ namespace WindowsFormsLibrarySystem
             // 
             // btnExport
             // 
-            this.btnExport.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.btnExport.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Location = new System.Drawing.Point(714, 0);
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnExport.Location = new System.Drawing.Point(712, 0);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(112, 36);
             this.btnExport.TabIndex = 1;
@@ -728,8 +742,8 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
             this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAdd.Location = new System.Drawing.Point(5, 8);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(112, 32);
@@ -741,9 +755,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
             this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(107, 8);
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnEdit.Location = new System.Drawing.Point(123, 8);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(88, 32);
             this.btnEdit.TabIndex = 1;
@@ -754,9 +768,9 @@ namespace WindowsFormsLibrarySystem
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(72)))), ((int)(((byte)(77)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(209, 8);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDelete.Location = new System.Drawing.Point(217, 8);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 32);
             this.btnDelete.TabIndex = 2;
@@ -768,17 +782,17 @@ namespace WindowsFormsLibrarySystem
             this.dgvBooks.AllowUserToAddRows = false;
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.AllowUserToResizeRows = false;
-            this.dgvBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.dgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.dgvBooks.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.dgvBooks.ColumnHeadersHeight = 38;
-            this.dgvBooks.EnableHeadersVisualStyles = false;
-            this.dgvBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.dgvBooks.RowTemplate.Height = 34;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -790,19 +804,22 @@ namespace WindowsFormsLibrarySystem
             this.colTotal,
             this.colAvail});
             this.dgvBooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBooks.EnableHeadersVisualStyles = false;
+            this.dgvBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.dgvBooks.Location = new System.Drawing.Point(7, 49);
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.ReadOnly = true;
             this.dgvBooks.RowHeadersVisible = false;
             this.dgvBooks.RowHeadersWidth = 51;
+            this.dgvBooks.RowTemplate.Height = 34;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooks.Size = new System.Drawing.Size(824, 366);
+            this.dgvBooks.Size = new System.Drawing.Size(824, 360);
             this.dgvBooks.TabIndex = 1;
             // 
             // colId
             // 
-            this.colId.HeaderText = "图书编号";
             this.colId.FillWeight = 88F;
+            this.colId.HeaderText = "图书编号";
             this.colId.MinimumWidth = 6;
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
@@ -810,8 +827,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colName
             // 
-            this.colName.HeaderText = "书名";
             this.colName.FillWeight = 140F;
+            this.colName.HeaderText = "书名";
             this.colName.MinimumWidth = 6;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
@@ -819,8 +836,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colAuthor
             // 
-            this.colAuthor.HeaderText = "作者";
             this.colAuthor.FillWeight = 120F;
+            this.colAuthor.HeaderText = "作者";
             this.colAuthor.MinimumWidth = 6;
             this.colAuthor.Name = "colAuthor";
             this.colAuthor.ReadOnly = true;
@@ -828,8 +845,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colPublisher
             // 
-            this.colPublisher.HeaderText = "出版社";
             this.colPublisher.FillWeight = 130F;
+            this.colPublisher.HeaderText = "出版社";
             this.colPublisher.MinimumWidth = 6;
             this.colPublisher.Name = "colPublisher";
             this.colPublisher.ReadOnly = true;
@@ -837,8 +854,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colCategory
             // 
-            this.colCategory.HeaderText = "分类";
             this.colCategory.FillWeight = 72F;
+            this.colCategory.HeaderText = "分类";
             this.colCategory.MinimumWidth = 6;
             this.colCategory.Name = "colCategory";
             this.colCategory.ReadOnly = true;
@@ -846,8 +863,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colPrice
             // 
-            this.colPrice.HeaderText = "单价(元)";
             this.colPrice.FillWeight = 72F;
+            this.colPrice.HeaderText = "单价(元)";
             this.colPrice.MinimumWidth = 6;
             this.colPrice.Name = "colPrice";
             this.colPrice.ReadOnly = true;
@@ -855,8 +872,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colTotal
             // 
-            this.colTotal.HeaderText = "馆藏数量";
             this.colTotal.FillWeight = 112F;
+            this.colTotal.HeaderText = "馆藏数量";
             this.colTotal.MinimumWidth = 6;
             this.colTotal.Name = "colTotal";
             this.colTotal.ReadOnly = true;
@@ -864,8 +881,8 @@ namespace WindowsFormsLibrarySystem
             // 
             // colAvail
             // 
-            this.colAvail.HeaderText = "可借数量";
             this.colAvail.FillWeight = 112F;
+            this.colAvail.HeaderText = "可借数量";
             this.colAvail.MinimumWidth = 6;
             this.colAvail.Name = "colAvail";
             this.colAvail.ReadOnly = true;
@@ -881,7 +898,7 @@ namespace WindowsFormsLibrarySystem
             this.flpPager.Controls.Add(this.btnFirst);
             this.flpPager.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPager.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flpPager.Location = new System.Drawing.Point(7, 421);
+            this.flpPager.Location = new System.Drawing.Point(7, 415);
             this.flpPager.Name = "flpPager";
             this.flpPager.Padding = new System.Windows.Forms.Padding(4);
             this.flpPager.Size = new System.Drawing.Size(824, 34);
@@ -975,7 +992,7 @@ namespace WindowsFormsLibrarySystem
             // tslClock
             // 
             this.tslClock.Name = "tslClock";
-            this.tslClock.Size = new System.Drawing.Size(801, 20);
+            this.tslClock.Size = new System.Drawing.Size(762, 20);
             this.tslClock.Spring = true;
             this.tslClock.Text = "日期时间：";
             // 
@@ -1013,6 +1030,7 @@ namespace WindowsFormsLibrarySystem
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.flowNav.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.gbUser.ResumeLayout(false);
             this.tlpRight.ResumeLayout(false);
             this.gbQuery.ResumeLayout(false);
@@ -1069,6 +1087,7 @@ namespace WindowsFormsLibrarySystem
         private System.Windows.Forms.Button btnNavSetting;
         private System.Windows.Forms.GroupBox gbUser;
         private System.Windows.Forms.Label lblUserInfo;
+        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.TableLayoutPanel tlpRight;
         private System.Windows.Forms.GroupBox gbQuery;
         private System.Windows.Forms.TableLayoutPanel tlpQuery;
