@@ -208,19 +208,19 @@ namespace WindowsFormsLibrarySystem
             // mnuBookIn
             // 
             this.mnuBookIn.Name = "mnuBookIn";
-            this.mnuBookIn.Size = new System.Drawing.Size(224, 26);
+            this.mnuBookIn.Size = new System.Drawing.Size(172, 26);
             this.mnuBookIn.Text = "图书入库(&I)";
             // 
             // mnuBookCategory
             // 
             this.mnuBookCategory.Name = "mnuBookCategory";
-            this.mnuBookCategory.Size = new System.Drawing.Size(224, 26);
+            this.mnuBookCategory.Size = new System.Drawing.Size(172, 26);
             this.mnuBookCategory.Text = "图书分类(&C)";
             // 
             // mnuBookCheck
             // 
             this.mnuBookCheck.Name = "mnuBookCheck";
-            this.mnuBookCheck.Size = new System.Drawing.Size(224, 26);
+            this.mnuBookCheck.Size = new System.Drawing.Size(172, 26);
             this.mnuBookCheck.Text = "图书盘点(&S)";
             // 
             // mnuReader
@@ -588,7 +588,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(383, 14);
+            this.cboCategory.Location = new System.Drawing.Point(383, 11);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(224, 28);
             this.cboCategory.TabIndex = 3;
@@ -653,7 +653,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(383, 49);
+            this.cboPublisher.Location = new System.Drawing.Point(383, 46);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(224, 28);
             this.cboPublisher.TabIndex = 9;
