@@ -95,7 +95,7 @@
             this.mnuHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -242,7 +242,7 @@
             this.tsbReader,
             this.tsbStat,
             this.tsbSetting});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.toolStrip1.Size = new System.Drawing.Size(1080, 31);
@@ -335,9 +335,9 @@
             this.pnlNav.Controls.Add(this.flowNav);
             this.pnlNav.Controls.Add(this.gbUser);
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNav.Location = new System.Drawing.Point(0, 61);
+            this.pnlNav.Location = new System.Drawing.Point(0, 59);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(200, 633);
+            this.pnlNav.Size = new System.Drawing.Size(200, 635);
             this.pnlNav.TabIndex = 6;
             // 
             // flowNav
@@ -355,7 +355,7 @@
             this.flowNav.Location = new System.Drawing.Point(0, 0);
             this.flowNav.Name = "flowNav";
             this.flowNav.Padding = new System.Windows.Forms.Padding(12, 14, 12, 12);
-            this.flowNav.Size = new System.Drawing.Size(200, 537);
+            this.flowNav.Size = new System.Drawing.Size(200, 539);
             this.flowNav.TabIndex = 1;
             this.flowNav.WrapContents = false;
             // 
@@ -449,7 +449,7 @@
             this.gbUser.Controls.Add(this.lblUserInfo);
             this.gbUser.Controls.Add(this.picAvatar);
             this.gbUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbUser.Location = new System.Drawing.Point(0, 537);
+            this.gbUser.Location = new System.Drawing.Point(0, 539);
             this.gbUser.Name = "gbUser";
             this.gbUser.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.gbUser.Size = new System.Drawing.Size(200, 96);

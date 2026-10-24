@@ -1,4 +1,4 @@
-namespace WindowsFormsLibrarySystem
+﻿namespace WindowsFormsLibrarySystem
 {
     partial class FrmBookCheck
     {
@@ -40,7 +40,6 @@ namespace WindowsFormsLibrarySystem
             this.txtBookName = new System.Windows.Forms.TextBox();
             this.btnStartCheck = new System.Windows.Forms.Button();
             this.dgvCheck = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colBookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBookCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +81,7 @@ namespace WindowsFormsLibrarySystem
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.lblTitle.Location = new System.Drawing.Point(16, 12);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(40, 19);
+            this.lblTitle.Size = new System.Drawing.Size(44, 24);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "分类";
             // 
@@ -105,28 +104,28 @@ namespace WindowsFormsLibrarySystem
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58F));
-            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
             this.tlpQuery.Controls.Add(this.lblCategory, 0, 0);
             this.tlpQuery.Controls.Add(this.cboCategory, 1, 0);
             this.tlpQuery.Controls.Add(this.lblBookName, 2, 0);
             this.tlpQuery.Controls.Add(this.txtBookName, 3, 0);
             this.tlpQuery.Controls.Add(this.btnStartCheck, 4, 0);
             this.tlpQuery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpQuery.Location = new System.Drawing.Point(11, 24);
+            this.tlpQuery.Location = new System.Drawing.Point(8, 26);
             this.tlpQuery.Name = "tlpQuery";
             this.tlpQuery.Padding = new System.Windows.Forms.Padding(6, 12, 6, 6);
             this.tlpQuery.RowCount = 1;
             this.tlpQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpQuery.Size = new System.Drawing.Size(1038, 56);
+            this.tlpQuery.Size = new System.Drawing.Size(1044, 56);
             this.tlpQuery.TabIndex = 0;
             // 
             // lblCategory
             // 
             this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(10, 31);
+            this.lblCategory.Location = new System.Drawing.Point(19, 22);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(64, 17);
+            this.lblCategory.Size = new System.Drawing.Size(54, 20);
             this.lblCategory.TabIndex = 0;
             this.lblCategory.Text = "分类：";
             this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,18 +134,18 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(79, 27);
+            this.cboCategory.Location = new System.Drawing.Point(79, 20);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(350, 25);
+            this.cboCategory.Size = new System.Drawing.Size(304, 28);
             this.cboCategory.TabIndex = 1;
             // 
             // lblBookName
             // 
             this.lblBookName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblBookName.AutoSize = true;
-            this.lblBookName.Location = new System.Drawing.Point(436, 31);
+            this.lblBookName.Location = new System.Drawing.Point(391, 22);
             this.lblBookName.Name = "lblBookName";
-            this.lblBookName.Size = new System.Drawing.Size(56, 17);
+            this.lblBookName.Size = new System.Drawing.Size(54, 20);
             this.lblBookName.TabIndex = 2;
             this.lblBookName.Text = "书名：";
             this.lblBookName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,9 +153,9 @@ namespace WindowsFormsLibrarySystem
             // txtBookName
             // 
             this.txtBookName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBookName.Location = new System.Drawing.Point(497, 27);
+            this.txtBookName.Location = new System.Drawing.Point(451, 18);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(374, 25);
+            this.txtBookName.Size = new System.Drawing.Size(422, 27);
             this.txtBookName.TabIndex = 3;
             // 
             // btnStartCheck
@@ -166,9 +165,9 @@ namespace WindowsFormsLibrarySystem
             this.btnStartCheck.FlatAppearance.BorderSize = 0;
             this.btnStartCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartCheck.ForeColor = System.Drawing.Color.White;
-            this.btnStartCheck.Location = new System.Drawing.Point(877, 23);
+            this.btnStartCheck.Location = new System.Drawing.Point(879, 15);
             this.btnStartCheck.Name = "btnStartCheck";
-            this.btnStartCheck.Size = new System.Drawing.Size(152, 36);
+            this.btnStartCheck.Size = new System.Drawing.Size(156, 34);
             this.btnStartCheck.TabIndex = 4;
             this.btnStartCheck.Text = "▣  开始盘点";
             this.btnStartCheck.UseVisualStyleBackColor = false;
@@ -180,10 +179,9 @@ namespace WindowsFormsLibrarySystem
             this.dgvCheck.AllowUserToResizeRows = false;
             this.dgvCheck.BackgroundColor = System.Drawing.Color.White;
             this.dgvCheck.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCheck.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
@@ -192,7 +190,6 @@ namespace WindowsFormsLibrarySystem
             this.dgvCheck.ColumnHeadersHeight = 40;
             this.dgvCheck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCheck.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCheck,
             this.colBookId,
             this.colTitle,
             this.colBookCount,
@@ -214,22 +211,18 @@ namespace WindowsFormsLibrarySystem
             this.dgvCheck.MultiSelect = false;
             this.dgvCheck.Name = "dgvCheck";
             this.dgvCheck.RowHeadersVisible = false;
+            this.dgvCheck.RowHeadersWidth = 51;
             this.dgvCheck.RowTemplate.Height = 36;
             this.dgvCheck.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCheck.Size = new System.Drawing.Size(1060, 464);
             this.dgvCheck.TabIndex = 2;
-            // 
-            // colCheck
-            // 
-            this.colCheck.HeaderText = "";
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Width = 42;
             // 
             // colBookId
             // 
             this.colBookId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colBookId.FillWeight = 80F;
             this.colBookId.HeaderText = "图书编号";
+            this.colBookId.MinimumWidth = 6;
             this.colBookId.Name = "colBookId";
             this.colBookId.ReadOnly = true;
             // 
@@ -238,6 +231,7 @@ namespace WindowsFormsLibrarySystem
             this.colTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTitle.FillWeight = 210F;
             this.colTitle.HeaderText = "书名";
+            this.colTitle.MinimumWidth = 6;
             this.colTitle.Name = "colTitle";
             this.colTitle.ReadOnly = true;
             // 
@@ -246,6 +240,7 @@ namespace WindowsFormsLibrarySystem
             this.colBookCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colBookCount.FillWeight = 90F;
             this.colBookCount.HeaderText = "账面数量";
+            this.colBookCount.MinimumWidth = 6;
             this.colBookCount.Name = "colBookCount";
             this.colBookCount.ReadOnly = true;
             // 
@@ -254,6 +249,7 @@ namespace WindowsFormsLibrarySystem
             this.colRealCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colRealCount.FillWeight = 90F;
             this.colRealCount.HeaderText = "实盘数量";
+            this.colRealCount.MinimumWidth = 6;
             this.colRealCount.Name = "colRealCount";
             this.colRealCount.ReadOnly = true;
             // 
@@ -262,6 +258,7 @@ namespace WindowsFormsLibrarySystem
             this.colDiff.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colDiff.FillWeight = 80F;
             this.colDiff.HeaderText = "差异";
+            this.colDiff.MinimumWidth = 6;
             this.colDiff.Name = "colDiff";
             this.colDiff.ReadOnly = true;
             // 
@@ -270,6 +267,7 @@ namespace WindowsFormsLibrarySystem
             this.colState.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colState.FillWeight = 80F;
             this.colState.HeaderText = "状态";
+            this.colState.MinimumWidth = 6;
             this.colState.Name = "colState";
             this.colState.ReadOnly = true;
             // 
@@ -294,7 +292,6 @@ namespace WindowsFormsLibrarySystem
             this.flpStat.Controls.Add(this.lblSumMore);
             this.flpStat.Controls.Add(this.txtSumMore);
             this.flpStat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpStat.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
             this.flpStat.Location = new System.Drawing.Point(0, 0);
             this.flpStat.Name = "flpStat";
             this.flpStat.Padding = new System.Windows.Forms.Padding(16, 20, 12, 10);
@@ -307,21 +304,21 @@ namespace WindowsFormsLibrarySystem
             this.lblSumBook.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSumBook.AutoSize = true;
             this.lblSumBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblSumBook.Location = new System.Drawing.Point(19, 24);
+            this.lblSumBook.Location = new System.Drawing.Point(19, 26);
             this.lblSumBook.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.lblSumBook.Name = "lblSumBook";
-            this.lblSumBook.Size = new System.Drawing.Size(64, 17);
+            this.lblSumBook.Size = new System.Drawing.Size(69, 20);
             this.lblSumBook.TabIndex = 0;
             this.lblSumBook.Text = "账面总数";
             // 
             // txtSumBook
             // 
             this.txtSumBook.BackColor = System.Drawing.Color.White;
-            this.txtSumBook.Location = new System.Drawing.Point(94, 22);
+            this.txtSumBook.Location = new System.Drawing.Point(99, 23);
             this.txtSumBook.Margin = new System.Windows.Forms.Padding(3, 3, 34, 3);
             this.txtSumBook.Name = "txtSumBook";
             this.txtSumBook.ReadOnly = true;
-            this.txtSumBook.Size = new System.Drawing.Size(92, 25);
+            this.txtSumBook.Size = new System.Drawing.Size(92, 27);
             this.txtSumBook.TabIndex = 1;
             this.txtSumBook.TabStop = false;
             this.txtSumBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -331,21 +328,21 @@ namespace WindowsFormsLibrarySystem
             this.lblSumReal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSumReal.AutoSize = true;
             this.lblSumReal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblSumReal.Location = new System.Drawing.Point(223, 24);
+            this.lblSumReal.Location = new System.Drawing.Point(228, 26);
             this.lblSumReal.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.lblSumReal.Name = "lblSumReal";
-            this.lblSumReal.Size = new System.Drawing.Size(64, 17);
+            this.lblSumReal.Size = new System.Drawing.Size(69, 20);
             this.lblSumReal.TabIndex = 2;
             this.lblSumReal.Text = "实盘总数";
             // 
             // txtSumReal
             // 
             this.txtSumReal.BackColor = System.Drawing.Color.White;
-            this.txtSumReal.Location = new System.Drawing.Point(298, 22);
+            this.txtSumReal.Location = new System.Drawing.Point(308, 23);
             this.txtSumReal.Margin = new System.Windows.Forms.Padding(3, 3, 34, 3);
             this.txtSumReal.Name = "txtSumReal";
             this.txtSumReal.ReadOnly = true;
-            this.txtSumReal.Size = new System.Drawing.Size(92, 25);
+            this.txtSumReal.Size = new System.Drawing.Size(92, 27);
             this.txtSumReal.TabIndex = 3;
             this.txtSumReal.TabStop = false;
             this.txtSumReal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -355,21 +352,21 @@ namespace WindowsFormsLibrarySystem
             this.lblSumLost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSumLost.AutoSize = true;
             this.lblSumLost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblSumLost.Location = new System.Drawing.Point(427, 24);
+            this.lblSumLost.Location = new System.Drawing.Point(437, 26);
             this.lblSumLost.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.lblSumLost.Name = "lblSumLost";
-            this.lblSumLost.Size = new System.Drawing.Size(34, 17);
+            this.lblSumLost.Size = new System.Drawing.Size(39, 20);
             this.lblSumLost.TabIndex = 4;
             this.lblSumLost.Text = "盘亏";
             // 
             // txtSumLost
             // 
             this.txtSumLost.BackColor = System.Drawing.Color.White;
-            this.txtSumLost.Location = new System.Drawing.Point(472, 22);
+            this.txtSumLost.Location = new System.Drawing.Point(487, 23);
             this.txtSumLost.Margin = new System.Windows.Forms.Padding(3, 3, 34, 3);
             this.txtSumLost.Name = "txtSumLost";
             this.txtSumLost.ReadOnly = true;
-            this.txtSumLost.Size = new System.Drawing.Size(92, 25);
+            this.txtSumLost.Size = new System.Drawing.Size(92, 27);
             this.txtSumLost.TabIndex = 5;
             this.txtSumLost.TabStop = false;
             this.txtSumLost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,21 +376,21 @@ namespace WindowsFormsLibrarySystem
             this.lblSumMore.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSumMore.AutoSize = true;
             this.lblSumMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblSumMore.Location = new System.Drawing.Point(601, 24);
+            this.lblSumMore.Location = new System.Drawing.Point(616, 26);
             this.lblSumMore.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.lblSumMore.Name = "lblSumMore";
-            this.lblSumMore.Size = new System.Drawing.Size(34, 17);
+            this.lblSumMore.Size = new System.Drawing.Size(39, 20);
             this.lblSumMore.TabIndex = 6;
             this.lblSumMore.Text = "盘盈";
             // 
             // txtSumMore
             // 
             this.txtSumMore.BackColor = System.Drawing.Color.White;
-            this.txtSumMore.Location = new System.Drawing.Point(646, 22);
+            this.txtSumMore.Location = new System.Drawing.Point(666, 23);
             this.txtSumMore.Margin = new System.Windows.Forms.Padding(3, 3, 34, 3);
             this.txtSumMore.Name = "txtSumMore";
             this.txtSumMore.ReadOnly = true;
-            this.txtSumMore.Size = new System.Drawing.Size(92, 25);
+            this.txtSumMore.Size = new System.Drawing.Size(92, 27);
             this.txtSumMore.TabIndex = 7;
             this.txtSumMore.TabStop = false;
             this.txtSumMore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -424,6 +421,7 @@ namespace WindowsFormsLibrarySystem
             this.flpStat.ResumeLayout(false);
             this.flpStat.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -438,7 +436,6 @@ namespace WindowsFormsLibrarySystem
         private System.Windows.Forms.TextBox txtBookName;
         private System.Windows.Forms.Button btnStartCheck;
         private System.Windows.Forms.DataGridView dgvCheck;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBookId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBookCount;
