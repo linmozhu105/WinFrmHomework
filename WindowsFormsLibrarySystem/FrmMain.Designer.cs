@@ -141,8 +141,8 @@ namespace WindowsFormsLibrarySystem
             this.tlpRoot.Location = new System.Drawing.Point(0, 0);
             this.tlpRoot.Name = "tlpRoot";
             this.tlpRoot.RowCount = 4;
-            this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRoot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tlpRoot.Size = new System.Drawing.Size(1080, 720);
@@ -150,6 +150,7 @@ namespace WindowsFormsLibrarySystem
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -266,8 +267,8 @@ namespace WindowsFormsLibrarySystem
             // mnuBorrowOverdue
             // 
             this.mnuBorrowOverdue.Name = "mnuBorrowOverdue";
-            this.mnuBorrowOverdue.Size = new System.Drawing.Size(174, 26);
-            this.mnuBorrowOverdue.Text = "借阅超期(&O)";
+            this.mnuBorrowOverdue.Size = new System.Drawing.Size(224, 26);
+            this.mnuBorrowOverdue.Text = "逾期催还(&O)";
             // 
             // mnuHelp
             // 
@@ -286,6 +287,7 @@ namespace WindowsFormsLibrarySystem
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -367,7 +369,7 @@ namespace WindowsFormsLibrarySystem
             // flowNav
             // 
             this.flowNav.AutoScroll = true;
-            this.flowNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.flowNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.flowNav.Controls.Add(this.btnNavBook);
             this.flowNav.Controls.Add(this.btnNavReader);
             this.flowNav.Controls.Add(this.btnNavBorrow);
@@ -385,67 +387,86 @@ namespace WindowsFormsLibrarySystem
             // 
             // btnNavBook
             // 
+            this.btnNavBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavBook.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavBook.Location = new System.Drawing.Point(15, 17);
+            this.btnNavBook.Location = new System.Drawing.Point(12, 17);
             this.btnNavBook.Name = "btnNavBook";
-            this.btnNavBook.Size = new System.Drawing.Size(164, 40);
+            this.btnNavBook.Size = new System.Drawing.Size(176, 40);
             this.btnNavBook.TabIndex = 0;
             this.btnNavBook.Text = "图书管理";
-            this.btnNavBook.UseVisualStyleBackColor = true;
+            this.btnNavBook.UseVisualStyleBackColor = false;
             // 
             // btnNavReader
             // 
+            this.btnNavReader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavReader.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavReader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavReader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavReader.Location = new System.Drawing.Point(15, 63);
+            this.btnNavReader.Location = new System.Drawing.Point(12, 63);
             this.btnNavReader.Name = "btnNavReader";
-            this.btnNavReader.Size = new System.Drawing.Size(164, 40);
+            this.btnNavReader.Size = new System.Drawing.Size(176, 40);
             this.btnNavReader.TabIndex = 1;
             this.btnNavReader.Text = "读者管理";
-            this.btnNavReader.UseVisualStyleBackColor = true;
+            this.btnNavReader.UseVisualStyleBackColor = false;
             // 
             // btnNavBorrow
             // 
+            this.btnNavBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavBorrow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavBorrow.Location = new System.Drawing.Point(15, 109);
+            this.btnNavBorrow.Location = new System.Drawing.Point(12, 109);
             this.btnNavBorrow.Name = "btnNavBorrow";
-            this.btnNavBorrow.Size = new System.Drawing.Size(164, 40);
+            this.btnNavBorrow.Size = new System.Drawing.Size(176, 40);
             this.btnNavBorrow.TabIndex = 2;
             this.btnNavBorrow.Text = "借书登记";
-            this.btnNavBorrow.UseVisualStyleBackColor = true;
+            this.btnNavBorrow.UseVisualStyleBackColor = false;
             // 
             // btnNavReturn
             // 
+            this.btnNavReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavReturn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavReturn.Location = new System.Drawing.Point(15, 155);
+            this.btnNavReturn.Location = new System.Drawing.Point(12, 155);
             this.btnNavReturn.Name = "btnNavReturn";
-            this.btnNavReturn.Size = new System.Drawing.Size(164, 40);
+            this.btnNavReturn.Size = new System.Drawing.Size(176, 40);
             this.btnNavReturn.TabIndex = 3;
             this.btnNavReturn.Text = "还书登记";
-            this.btnNavReturn.UseVisualStyleBackColor = true;
+            this.btnNavReturn.UseVisualStyleBackColor = false;
             // 
             // btnNavSearch
             // 
+            this.btnNavSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavSearch.Location = new System.Drawing.Point(15, 201);
+            this.btnNavSearch.Location = new System.Drawing.Point(12, 201);
             this.btnNavSearch.Name = "btnNavSearch";
-            this.btnNavSearch.Size = new System.Drawing.Size(164, 40);
+            this.btnNavSearch.Size = new System.Drawing.Size(176, 40);
             this.btnNavSearch.TabIndex = 4;
             this.btnNavSearch.Text = "图书查询";
-            this.btnNavSearch.UseVisualStyleBackColor = true;
+            this.btnNavSearch.UseVisualStyleBackColor = false;
             // 
             // btnNavSetting
             // 
+            this.btnNavSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNavSetting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btnNavSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNavSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavSetting.Location = new System.Drawing.Point(15, 247);
+            this.btnNavSetting.Location = new System.Drawing.Point(12, 247);
             this.btnNavSetting.Name = "btnNavSetting";
-            this.btnNavSetting.Size = new System.Drawing.Size(164, 40);
+            this.btnNavSetting.Size = new System.Drawing.Size(176, 40);
             this.btnNavSetting.TabIndex = 5;
             this.btnNavSetting.Text = "系统设置";
-            this.btnNavSetting.UseVisualStyleBackColor = true;
+            this.btnNavSetting.UseVisualStyleBackColor = false;
             // 
             // gbUser
             // 
             this.gbUser.Controls.Add(this.lblUserInfo);
+            this.gbUser.BackColor = System.Drawing.Color.White;
             this.gbUser.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbUser.Location = new System.Drawing.Point(0, 530);
             this.gbUser.Name = "gbUser";
@@ -473,6 +494,7 @@ namespace WindowsFormsLibrarySystem
             this.tlpRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpRight.Location = new System.Drawing.Point(0, 0);
             this.tlpRight.Name = "tlpRight";
+            this.tlpRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.tlpRight.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
             this.tlpRight.RowCount = 2;
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
@@ -488,6 +510,7 @@ namespace WindowsFormsLibrarySystem
             this.gbQuery.Name = "gbQuery";
             this.gbQuery.Size = new System.Drawing.Size(844, 110);
             this.gbQuery.TabIndex = 0;
+            this.gbQuery.BackColor = System.Drawing.Color.White;
             this.gbQuery.TabStop = false;
             this.gbQuery.Text = "查询条件";
             // 
@@ -553,7 +576,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(378, 11);
+            this.cboCategory.Location = new System.Drawing.Point(378, 14);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(239, 28);
             this.cboCategory.TabIndex = 3;
@@ -561,24 +584,30 @@ namespace WindowsFormsLibrarySystem
             // btnQuery
             // 
             this.btnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnQuery.FlatAppearance.BorderSize = 0;
+            this.btnQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuery.Location = new System.Drawing.Point(623, 11);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(56, 28);
             this.btnQuery.TabIndex = 4;
             this.btnQuery.Text = "查询";
-            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.UseVisualStyleBackColor = false;
             // 
             // btnReset
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Location = new System.Drawing.Point(685, 11);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(144, 28);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "重置";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             // 
             // lblAuthor
             // 
@@ -612,7 +641,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(378, 46);
+            this.cboPublisher.Location = new System.Drawing.Point(378, 49);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(239, 28);
             this.cboPublisher.TabIndex = 9;
@@ -625,6 +654,7 @@ namespace WindowsFormsLibrarySystem
             this.lblCount.Size = new System.Drawing.Size(144, 20);
             this.lblCount.TabIndex = 10;
             this.lblCount.Text = "记录数：0";
+            this.lblCount.Visible = false;
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gbList
@@ -635,6 +665,7 @@ namespace WindowsFormsLibrarySystem
             this.gbList.Name = "gbList";
             this.gbList.Size = new System.Drawing.Size(844, 488);
             this.gbList.TabIndex = 1;
+            this.gbList.BackColor = System.Drawing.Color.White;
             this.gbList.TabStop = false;
             this.gbList.Text = "图书列表";
             // 
@@ -669,13 +700,16 @@ namespace WindowsFormsLibrarySystem
             // btnExport
             // 
             this.btnExport.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.Location = new System.Drawing.Point(714, 0);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(110, 36);
+            this.btnExport.Size = new System.Drawing.Size(112, 36);
             this.btnExport.TabIndex = 1;
-            this.btnExport.Text = "导出 Excel";
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Text = "⤓  导出Excel";
+            this.btnExport.UseVisualStyleBackColor = false;
             // 
             // flpListTool
             // 
@@ -692,41 +726,59 @@ namespace WindowsFormsLibrarySystem
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(5, 8);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(96, 30);
+            this.btnAdd.Size = new System.Drawing.Size(112, 32);
             this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "新增图书";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Text = "＋  新增图书";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Location = new System.Drawing.Point(107, 8);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(96, 30);
+            this.btnEdit.Size = new System.Drawing.Size(88, 32);
             this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "修改";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Text = "✎  修改";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(72)))), ((int)(((byte)(77)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(209, 8);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(96, 30);
+            this.btnDelete.Size = new System.Drawing.Size(88, 32);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Text = "✕  删除";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // dgvBooks
             // 
             this.dgvBooks.AllowUserToAddRows = false;
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.AllowUserToResizeRows = false;
+            this.dgvBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.dgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.dgvBooks.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.dgvBooks.ColumnHeadersHeight = 38;
+            this.dgvBooks.EnableHeadersVisualStyles = false;
+            this.dgvBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.dgvBooks.RowTemplate.Height = 34;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -750,6 +802,7 @@ namespace WindowsFormsLibrarySystem
             // colId
             // 
             this.colId.HeaderText = "图书编号";
+            this.colId.FillWeight = 88F;
             this.colId.MinimumWidth = 6;
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
@@ -758,14 +811,16 @@ namespace WindowsFormsLibrarySystem
             // colName
             // 
             this.colName.HeaderText = "书名";
+            this.colName.FillWeight = 140F;
             this.colName.MinimumWidth = 6;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
-            this.colName.Width = 150;
+            this.colName.Width = 130;
             // 
             // colAuthor
             // 
             this.colAuthor.HeaderText = "作者";
+            this.colAuthor.FillWeight = 120F;
             this.colAuthor.MinimumWidth = 6;
             this.colAuthor.Name = "colAuthor";
             this.colAuthor.ReadOnly = true;
@@ -774,22 +829,25 @@ namespace WindowsFormsLibrarySystem
             // colPublisher
             // 
             this.colPublisher.HeaderText = "出版社";
+            this.colPublisher.FillWeight = 130F;
             this.colPublisher.MinimumWidth = 6;
             this.colPublisher.Name = "colPublisher";
             this.colPublisher.ReadOnly = true;
-            this.colPublisher.Width = 140;
+            this.colPublisher.Width = 130;
             // 
             // colCategory
             // 
             this.colCategory.HeaderText = "分类";
+            this.colCategory.FillWeight = 72F;
             this.colCategory.MinimumWidth = 6;
             this.colCategory.Name = "colCategory";
             this.colCategory.ReadOnly = true;
-            this.colCategory.Width = 80;
+            this.colCategory.Width = 72;
             // 
             // colPrice
             // 
             this.colPrice.HeaderText = "单价(元)";
+            this.colPrice.FillWeight = 72F;
             this.colPrice.MinimumWidth = 6;
             this.colPrice.Name = "colPrice";
             this.colPrice.ReadOnly = true;
@@ -798,18 +856,20 @@ namespace WindowsFormsLibrarySystem
             // colTotal
             // 
             this.colTotal.HeaderText = "馆藏数量";
+            this.colTotal.FillWeight = 112F;
             this.colTotal.MinimumWidth = 6;
             this.colTotal.Name = "colTotal";
             this.colTotal.ReadOnly = true;
-            this.colTotal.Width = 80;
+            this.colTotal.Width = 95;
             // 
             // colAvail
             // 
             this.colAvail.HeaderText = "可借数量";
+            this.colAvail.FillWeight = 112F;
             this.colAvail.MinimumWidth = 6;
             this.colAvail.Name = "colAvail";
             this.colAvail.ReadOnly = true;
-            this.colAvail.Width = 80;
+            this.colAvail.Width = 95;
             // 
             // flpPager
             // 
@@ -893,6 +953,7 @@ namespace WindowsFormsLibrarySystem
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -932,7 +993,7 @@ namespace WindowsFormsLibrarySystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.tlpRoot);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
