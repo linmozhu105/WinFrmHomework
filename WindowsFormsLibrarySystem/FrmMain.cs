@@ -18,31 +18,44 @@ namespace WindowsFormsLibrarySystem
     /// </summary>
     public partial class FrmMain : Form
     {
+
         public FrmMain()
         {
             InitializeComponent();
-
+            //默认打开图书管理页面
+            OpenMdiChild(new FrmBookList());
             // 提示：MDI 客户区默认是深灰色，想改成浅色可以遍历 this.Controls 找到 MdiClient 再设 BackColor。
         }
 
-        // ============================================================
-        // 说明：下面每个方法的 Click 事件都已经在 FrmMain.Designer.cs 里绑定好了，
-        // 不需要再去设计器重复绑定，只要在方法体里写“打开哪个子窗体”的逻辑。
-        //
-        // 建议先自己写一个统一的方法（名字随意，比如 OpenMdiChild），里面做三件事：
-        //   1. 判断同类型子窗体是否已经打开，是就 Activate 并返回；
-        //   2. child.MdiParent = this;
-        //   3. child.WindowState = FormWindowState.Maximized; child.Show();
-        // 然后下面每个方法写一行调用它。
-        //
-        // 注意：修改密码是对话框（FixedDialog），要用 ShowDialog，不能设 MdiParent。
-        // ============================================================
+        private void OpenMdiChild(Form child)
+        {
+            //遍历父窗口的全部孩子
+            foreach (var item in this.MdiChildren)
+            {
+                //如果同类型的子孩子  把他显示都最上面 GetType获取类型
+                if (item.GetType() == child.GetType())
+                {
+                    item.Activate();    // 把已有窗口拉到最前面
+                    child.Dispose();   // 刚 new 出来这个用不上，释放掉
+                    return;            // 直接结束，不再往下执行
+                }
+            }
+            //如果父窗体没有这个孩子
+            child.MdiParent = this;     //把该窗口指定为父窗体
+
+            child.WindowState = FormWindowState.Maximized;//把子窗口初始最大化
+            child.Show();              // 子窗体用 Show，不能用 ShowDialog
+        }
 
         #region 系统菜单
 
         private void mnuUserManage_Click(object sender, EventArgs e)
         {
             // TODO: 打开用户管理窗体
+            //FrmUserManage frmUserManage = new FrmUserManage();
+            //OpenMdiChild(frmUserManage);
+            //等价写法
+            OpenMdiChild(new FrmUserManage());
         }
 
         private void mnuChangePwd_Click(object sender, EventArgs e)
@@ -62,16 +75,19 @@ namespace WindowsFormsLibrarySystem
         private void mnuBookIn_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书入库窗体
+            OpenMdiChild(new FrmBookIn());
         }
 
         private void mnuBookCategory_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书分类窗体
+            OpenMdiChild(new FrmBookCategory());
         }
 
         private void mnuBookCheck_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书盘点窗体
+            OpenMdiChild(new FrmBookCheck());
         }
 
         #endregion
@@ -81,11 +97,13 @@ namespace WindowsFormsLibrarySystem
         private void mnuReaderFile_Click(object sender, EventArgs e)
         {
             // TODO: 打开读者档案窗体
+            OpenMdiChild(new FrmReaderFile());
         }
 
         private void mnuReaderLoss_Click(object sender, EventArgs e)
         {
             // TODO: 打开读者挂失窗体
+            OpenMdiChild(new FrmReaderLoss());
         }
 
         #endregion
@@ -95,16 +113,19 @@ namespace WindowsFormsLibrarySystem
         private void mnuBorrowIn_Click(object sender, EventArgs e)
         {
             // TODO: 打开借书登记窗体
+            OpenMdiChild(new FrmBorrowRegister());
         }
 
         private void mnuBorrowOut_Click(object sender, EventArgs e)
         {
             // TODO: 打开还书登记窗体
+            OpenMdiChild(new FrmReturnBook());
         }
 
         private void mnuBorrowOverdue_Click(object sender, EventArgs e)
         {
             // TODO: 打开逾期催还窗体
+            OpenMdiChild(new FrmOverdue());
         }
 
         #endregion
@@ -123,31 +144,36 @@ namespace WindowsFormsLibrarySystem
         private void tsbBookIn_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书入库窗体
+            OpenMdiChild(new FrmBookIn());
         }
 
         private void tsbBorrow_Click(object sender, EventArgs e)
         {
             // TODO: 打开借书登记窗体
+            OpenMdiChild(new FrmBorrowRegister());
         }
 
         private void tsbReturn_Click(object sender, EventArgs e)
         {
             // TODO: 打开还书登记窗体
+            OpenMdiChild(new FrmReturnBook());
         }
 
         private void tsbReader_Click(object sender, EventArgs e)
         {
             // TODO: 打开读者档案窗体
+            OpenMdiChild(new FrmReaderFile());
         }
 
         private void tsbStat_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书盘点窗体
+            OpenMdiChild(new FrmBookCheck());
         }
 
         private void tsbSetting_Click(object sender, EventArgs e)
         {
-            // TODO: 打开用户管理窗体
+            
         }
 
         #endregion
@@ -157,31 +183,36 @@ namespace WindowsFormsLibrarySystem
         private void btnNavBook_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书入库窗体
+            OpenMdiChild(new FrmBookList());
         }
 
         private void btnNavReader_Click(object sender, EventArgs e)
         {
             // TODO: 打开读者档案窗体
+            OpenMdiChild(new FrmReaderFile());
         }
 
         private void btnNavBorrow_Click(object sender, EventArgs e)
         {
             // TODO: 打开借书登记窗体
+            OpenMdiChild(new FrmBorrowRegister());
         }
 
         private void btnNavReturn_Click(object sender, EventArgs e)
         {
             // TODO: 打开还书登记窗体
+            OpenMdiChild(new FrmReturnBook());
         }
 
         private void btnNavSearch_Click(object sender, EventArgs e)
         {
             // TODO: 打开图书查询窗体（FrmBookList）
+            OpenMdiChild(new FrmBookList());
         }
 
         private void btnNavSetting_Click(object sender, EventArgs e)
         {
-            // TODO: 打开用户管理窗体
+
         }
 
         #endregion

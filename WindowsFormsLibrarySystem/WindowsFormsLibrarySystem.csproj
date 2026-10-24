@@ -164,6 +164,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +178,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\充值.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\订单.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\监控.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\区域.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上网.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

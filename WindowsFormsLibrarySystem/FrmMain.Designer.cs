@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuSystem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,13 +83,9 @@
             // 
             this.timer1.Interval = 1000;
             // 
-            this.Controls.Add(this.pnlNav);
-            // 
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSystem,
@@ -111,14 +106,15 @@
             this.mnuChangePwd,
             this.mnuExit});
             this.mnuSystem.Name = "mnuSystem";
-            this.mnuSystem.Size = new System.Drawing.Size(72, 26);
+            this.mnuSystem.Size = new System.Drawing.Size(72, 24);
             this.mnuSystem.Text = "系统(&S)";
             // 
             // mnuUserManage
             // 
             this.mnuUserManage.Name = "mnuUserManage";
-            this.mnuUserManage.Size = new System.Drawing.Size(173, 26);
+            this.mnuUserManage.Size = new System.Drawing.Size(224, 26);
             this.mnuUserManage.Text = "用户管理(&U)";
+            this.mnuUserManage.Click += new System.EventHandler(this.mnuUserManage_Click);
             // 
             // mnuChangePwd
             // 
@@ -141,7 +137,7 @@
             this.mnuBookCategory,
             this.mnuBookCheck});
             this.mnuBook.Name = "mnuBook";
-            this.mnuBook.Size = new System.Drawing.Size(102, 26);
+            this.mnuBook.Size = new System.Drawing.Size(102, 24);
             this.mnuBook.Text = "图书管理(&B)";
             // 
             // mnuBookIn
@@ -171,7 +167,7 @@
             this.mnuReaderFile,
             this.mnuReaderLoss});
             this.mnuReader.Name = "mnuReader";
-            this.mnuReader.Size = new System.Drawing.Size(103, 26);
+            this.mnuReader.Size = new System.Drawing.Size(103, 24);
             this.mnuReader.Text = "读者管理(&R)";
             // 
             // mnuReaderFile
@@ -195,7 +191,7 @@
             this.mnuBorrowOut,
             this.mnuBorrowOverdue});
             this.mnuBorrow.Name = "mnuBorrow";
-            this.mnuBorrow.Size = new System.Drawing.Size(101, 26);
+            this.mnuBorrow.Size = new System.Drawing.Size(101, 24);
             this.mnuBorrow.Text = "借阅管理(&L)";
             // 
             // mnuBorrowIn
@@ -224,7 +220,7 @@
             this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAbout});
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(75, 26);
+            this.mnuHelp.Size = new System.Drawing.Size(75, 24);
             this.mnuHelp.Text = "帮助(&H)";
             // 
             // mnuAbout
@@ -237,7 +233,6 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -247,7 +242,7 @@
             this.tsbReader,
             this.tsbStat,
             this.tsbSetting});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 32);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.toolStrip1.Size = new System.Drawing.Size(1080, 31);
@@ -256,56 +251,55 @@
             // 
             // tsbBookIn
             // 
-            this.tsbBookIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbBookIn.Image = global::WindowsFormsLibrarySystem.Properties.Resources.报表;
             this.tsbBookIn.Name = "tsbBookIn";
-            this.tsbBookIn.Size = new System.Drawing.Size(73, 24);
+            this.tsbBookIn.Size = new System.Drawing.Size(93, 24);
             this.tsbBookIn.Text = "图书入库";
             this.tsbBookIn.Click += new System.EventHandler(this.tsbBookIn_Click);
             // 
             // tsbBorrow
             // 
-            this.tsbBorrow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbBorrow.Image = global::WindowsFormsLibrarySystem.Properties.Resources.充值;
             this.tsbBorrow.Name = "tsbBorrow";
-            this.tsbBorrow.Size = new System.Drawing.Size(73, 24);
+            this.tsbBorrow.Size = new System.Drawing.Size(93, 24);
             this.tsbBorrow.Text = "借书登记";
             this.tsbBorrow.Click += new System.EventHandler(this.tsbBorrow_Click);
             // 
             // tsbReturn
             // 
-            this.tsbReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbReturn.Image = global::WindowsFormsLibrarySystem.Properties.Resources.订单;
             this.tsbReturn.Name = "tsbReturn";
-            this.tsbReturn.Size = new System.Drawing.Size(73, 24);
+            this.tsbReturn.Size = new System.Drawing.Size(93, 24);
             this.tsbReturn.Text = "还书登记";
             this.tsbReturn.Click += new System.EventHandler(this.tsbReturn_Click);
             // 
             // tsbReader
             // 
-            this.tsbReader.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbReader.Image = global::WindowsFormsLibrarySystem.Properties.Resources.监控;
             this.tsbReader.Name = "tsbReader";
-            this.tsbReader.Size = new System.Drawing.Size(73, 24);
-            this.tsbReader.Text = "读者管理";
+            this.tsbReader.Size = new System.Drawing.Size(93, 24);
+            this.tsbReader.Text = "读者档案";
             this.tsbReader.Click += new System.EventHandler(this.tsbReader_Click);
             // 
             // tsbStat
             // 
-            this.tsbStat.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbStat.Image = global::WindowsFormsLibrarySystem.Properties.Resources.上网;
             this.tsbStat.Name = "tsbStat";
-            this.tsbStat.Size = new System.Drawing.Size(73, 24);
-            this.tsbStat.Text = "数据统计";
+            this.tsbStat.Size = new System.Drawing.Size(93, 24);
+            this.tsbStat.Text = "图书盘点";
             this.tsbStat.Click += new System.EventHandler(this.tsbStat_Click);
             // 
             // tsbSetting
             // 
-            this.tsbSetting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbSetting.Image = global::WindowsFormsLibrarySystem.Properties.Resources.区域;
             this.tsbSetting.Name = "tsbSetting";
-            this.tsbSetting.Size = new System.Drawing.Size(73, 24);
+            this.tsbSetting.Size = new System.Drawing.Size(93, 24);
             this.tsbSetting.Text = "系统设置";
             this.tsbSetting.Click += new System.EventHandler(this.tsbSetting_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
-            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslUser,
@@ -341,9 +335,9 @@
             this.pnlNav.Controls.Add(this.flowNav);
             this.pnlNav.Controls.Add(this.gbUser);
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNav.Location = new System.Drawing.Point(0, 0);
+            this.pnlNav.Location = new System.Drawing.Point(0, 61);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(200, 620);
+            this.pnlNav.Size = new System.Drawing.Size(200, 633);
             this.pnlNav.TabIndex = 6;
             // 
             // flowNav
@@ -361,7 +355,7 @@
             this.flowNav.Location = new System.Drawing.Point(0, 0);
             this.flowNav.Name = "flowNav";
             this.flowNav.Padding = new System.Windows.Forms.Padding(12, 14, 12, 12);
-            this.flowNav.Size = new System.Drawing.Size(200, 620);
+            this.flowNav.Size = new System.Drawing.Size(200, 537);
             this.flowNav.TabIndex = 1;
             this.flowNav.WrapContents = false;
             // 
@@ -389,7 +383,7 @@
             this.btnNavReader.Name = "btnNavReader";
             this.btnNavReader.Size = new System.Drawing.Size(176, 40);
             this.btnNavReader.TabIndex = 1;
-            this.btnNavReader.Text = "读者管理";
+            this.btnNavReader.Text = "读者档案";
             this.btnNavReader.UseVisualStyleBackColor = false;
             this.btnNavReader.Click += new System.EventHandler(this.btnNavReader_Click);
             // 
@@ -455,10 +449,10 @@
             this.gbUser.Controls.Add(this.lblUserInfo);
             this.gbUser.Controls.Add(this.picAvatar);
             this.gbUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbUser.Location = new System.Drawing.Point(15, 293);
+            this.gbUser.Location = new System.Drawing.Point(0, 537);
             this.gbUser.Name = "gbUser";
             this.gbUser.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.gbUser.Size = new System.Drawing.Size(176, 96);
+            this.gbUser.Size = new System.Drawing.Size(200, 96);
             this.gbUser.TabIndex = 6;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "当前用户";
@@ -484,14 +478,14 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -509,6 +503,7 @@
             this.gbUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpRight = new System.Windows.Forms.TableLayoutPanel();
             this.gbQuery = new System.Windows.Forms.GroupBox();
             this.tlpQuery = new System.Windows.Forms.TableLayoutPanel();
@@ -76,6 +75,8 @@
             this.flpListTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.flpPager.SuspendLayout();
+            this.SuspendLayout();
+            // 
             // tlpRight
             // 
             this.tlpRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
@@ -84,14 +85,14 @@
             this.tlpRight.Controls.Add(this.gbQuery, 0, 0);
             this.tlpRight.Controls.Add(this.gbList, 0, 1);
             this.tlpRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpRight.Location = new System.Drawing.Point(0, 0);
+            this.tlpRight.Location = new System.Drawing.Point(10, 10);
             this.tlpRight.Name = "tlpRight";
             this.tlpRight.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
             this.tlpRight.RowCount = 2;
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpRight.Size = new System.Drawing.Size(870, 620);
+            this.tlpRight.Size = new System.Drawing.Size(860, 620);
             this.tlpRight.TabIndex = 0;
             // 
             // gbQuery
@@ -101,7 +102,7 @@
             this.gbQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbQuery.Location = new System.Drawing.Point(13, 11);
             this.gbQuery.Name = "gbQuery";
-            this.gbQuery.Size = new System.Drawing.Size(844, 110);
+            this.gbQuery.Size = new System.Drawing.Size(834, 110);
             this.gbQuery.TabIndex = 0;
             this.gbQuery.TabStop = false;
             this.gbQuery.Text = "查询条件";
@@ -132,7 +133,7 @@
             this.tlpQuery.RowCount = 2;
             this.tlpQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpQuery.Size = new System.Drawing.Size(838, 84);
+            this.tlpQuery.Size = new System.Drawing.Size(828, 84);
             this.tlpQuery.TabIndex = 0;
             // 
             // lblBookName
@@ -150,13 +151,13 @@
             this.txtBookName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookName.Location = new System.Drawing.Point(81, 12);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(224, 27);
+            this.txtBookName.Size = new System.Drawing.Size(219, 27);
             this.txtBookName.TabIndex = 1;
             // 
             // lblCategory
             // 
             this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCategory.Location = new System.Drawing.Point(316, 15);
+            this.lblCategory.Location = new System.Drawing.Point(311, 15);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(56, 20);
             this.lblCategory.TabIndex = 2;
@@ -167,9 +168,9 @@
             // 
             this.cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Location = new System.Drawing.Point(383, 14);
+            this.cboCategory.Location = new System.Drawing.Point(378, 11);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(224, 28);
+            this.cboCategory.Size = new System.Drawing.Size(219, 28);
             this.cboCategory.TabIndex = 3;
             // 
             // btnQuery
@@ -179,7 +180,7 @@
             this.btnQuery.FlatAppearance.BorderSize = 0;
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnQuery.Location = new System.Drawing.Point(613, 11);
+            this.btnQuery.Location = new System.Drawing.Point(603, 11);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(66, 28);
             this.btnQuery.TabIndex = 4;
@@ -193,7 +194,7 @@
             this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnReset.Location = new System.Drawing.Point(685, 11);
+            this.btnReset.Location = new System.Drawing.Point(675, 11);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(144, 28);
             this.btnReset.TabIndex = 5;
@@ -215,13 +216,13 @@
             this.txtAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAuthor.Location = new System.Drawing.Point(81, 47);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(224, 27);
+            this.txtAuthor.Size = new System.Drawing.Size(219, 27);
             this.txtAuthor.TabIndex = 7;
             // 
             // lblPublisher
             // 
             this.lblPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPublisher.Location = new System.Drawing.Point(311, 50);
+            this.lblPublisher.Location = new System.Drawing.Point(306, 50);
             this.lblPublisher.Name = "lblPublisher";
             this.lblPublisher.Size = new System.Drawing.Size(66, 20);
             this.lblPublisher.TabIndex = 8;
@@ -232,9 +233,9 @@
             // 
             this.cboPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPublisher.Location = new System.Drawing.Point(383, 49);
+            this.cboPublisher.Location = new System.Drawing.Point(378, 49);
             this.cboPublisher.Name = "cboPublisher";
-            this.cboPublisher.Size = new System.Drawing.Size(224, 28);
+            this.cboPublisher.Size = new System.Drawing.Size(219, 28);
             this.cboPublisher.TabIndex = 9;
             // 
             // gbList
@@ -244,7 +245,7 @@
             this.gbList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbList.Location = new System.Drawing.Point(13, 127);
             this.gbList.Name = "gbList";
-            this.gbList.Size = new System.Drawing.Size(844, 482);
+            this.gbList.Size = new System.Drawing.Size(834, 482);
             this.gbList.TabIndex = 1;
             this.gbList.TabStop = false;
             this.gbList.Text = "图书列表";
@@ -265,7 +266,7 @@
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlpList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpList.Size = new System.Drawing.Size(838, 456);
+            this.tlpList.Size = new System.Drawing.Size(828, 456);
             this.tlpList.TabIndex = 0;
             // 
             // pnlListTool
@@ -275,7 +276,7 @@
             this.pnlListTool.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListTool.Location = new System.Drawing.Point(7, 7);
             this.pnlListTool.Name = "pnlListTool";
-            this.pnlListTool.Size = new System.Drawing.Size(824, 36);
+            this.pnlListTool.Size = new System.Drawing.Size(814, 36);
             this.pnlListTool.TabIndex = 0;
             // 
             // btnExport
@@ -285,7 +286,7 @@
             this.btnExport.FlatAppearance.BorderSize = 0;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExport.Location = new System.Drawing.Point(712, 0);
+            this.btnExport.Location = new System.Drawing.Point(702, 0);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(112, 36);
             this.btnExport.TabIndex = 1;
@@ -301,7 +302,7 @@
             this.flpListTool.Location = new System.Drawing.Point(0, 0);
             this.flpListTool.Name = "flpListTool";
             this.flpListTool.Padding = new System.Windows.Forms.Padding(2, 5, 2, 2);
-            this.flpListTool.Size = new System.Drawing.Size(824, 36);
+            this.flpListTool.Size = new System.Drawing.Size(814, 36);
             this.flpListTool.TabIndex = 0;
             this.flpListTool.WrapContents = false;
             // 
@@ -350,16 +351,14 @@
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.AllowUserToResizeRows = false;
             this.dgvBooks.BackgroundColor = System.Drawing.Color.White;
-            this.dgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -380,7 +379,7 @@
             this.dgvBooks.RowHeadersWidth = 51;
             this.dgvBooks.RowTemplate.Height = 34;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooks.Size = new System.Drawing.Size(824, 360);
+            this.dgvBooks.Size = new System.Drawing.Size(814, 360);
             this.dgvBooks.TabIndex = 1;
             // 
             // colId
@@ -468,14 +467,14 @@
             this.flpPager.Location = new System.Drawing.Point(7, 415);
             this.flpPager.Name = "flpPager";
             this.flpPager.Padding = new System.Windows.Forms.Padding(4);
-            this.flpPager.Size = new System.Drawing.Size(824, 34);
+            this.flpPager.Size = new System.Drawing.Size(814, 34);
             this.flpPager.TabIndex = 2;
             this.flpPager.WrapContents = false;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(727, 4);
+            this.lblTotal.Location = new System.Drawing.Point(717, 4);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(86, 20);
             this.lblTotal.TabIndex = 5;
@@ -485,7 +484,7 @@
             // 
             this.btnLast.AutoSize = true;
             this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast.Location = new System.Drawing.Point(665, 7);
+            this.btnLast.Location = new System.Drawing.Point(655, 7);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(56, 32);
             this.btnLast.TabIndex = 4;
@@ -496,7 +495,7 @@
             // 
             this.btnNext.AutoSize = true;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Location = new System.Drawing.Point(593, 7);
+            this.btnNext.Location = new System.Drawing.Point(583, 7);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(66, 32);
             this.btnNext.TabIndex = 3;
@@ -506,7 +505,7 @@
             // lblPage
             // 
             this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(509, 9);
+            this.lblPage.Location = new System.Drawing.Point(499, 9);
             this.lblPage.Margin = new System.Windows.Forms.Padding(10, 5, 10, 3);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(71, 20);
@@ -517,7 +516,7 @@
             // 
             this.btnPrev.AutoSize = true;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Location = new System.Drawing.Point(430, 7);
+            this.btnPrev.Location = new System.Drawing.Point(420, 7);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(66, 32);
             this.btnPrev.TabIndex = 1;
@@ -528,13 +527,12 @@
             // 
             this.btnFirst.AutoSize = true;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Location = new System.Drawing.Point(368, 7);
+            this.btnFirst.Location = new System.Drawing.Point(358, 7);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(56, 32);
             this.btnFirst.TabIndex = 0;
             this.btnFirst.Text = "首页";
             this.btnFirst.UseVisualStyleBackColor = true;
-            // 
             // 
             // FrmBookList
             // 
@@ -549,6 +547,7 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "图书查询";
+            this.Load += new System.EventHandler(this.FrmBookList_Load);
             this.tlpRight.ResumeLayout(false);
             this.gbQuery.ResumeLayout(false);
             this.tlpQuery.ResumeLayout(false);
