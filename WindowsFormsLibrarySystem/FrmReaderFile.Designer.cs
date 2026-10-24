@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlQuery = new System.Windows.Forms.Panel();
-            this.lblQueryTitle = new System.Windows.Forms.Label();
             this.tlpQuery = new System.Windows.Forms.TableLayoutPanel();
             this.lblCardNo = new System.Windows.Forms.Label();
             this.txtCardNo = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.cboType = new System.Windows.Forms.ComboBox();
             this.btnQuery = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblQueryTitle = new System.Windows.Forms.Label();
             this.pnlList = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.dgvReaders = new System.Windows.Forms.DataGridView();
@@ -81,20 +81,9 @@
             this.pnlQuery.Size = new System.Drawing.Size(1060, 172);
             this.pnlQuery.TabIndex = 0;
             // 
-            // lblQueryTitle
-            // 
-            this.lblQueryTitle.AutoSize = true;
-            this.lblQueryTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblQueryTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblQueryTitle.Location = new System.Drawing.Point(24, 16);
-            this.lblQueryTitle.Name = "lblQueryTitle";
-            this.lblQueryTitle.Size = new System.Drawing.Size(60, 19);
-            this.lblQueryTitle.TabIndex = 0;
-            this.lblQueryTitle.Text = "查询条";
-            // 
             // tlpQuery
             // 
-            this.tlpQuery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tlpQuery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpQuery.ColumnCount = 6;
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
@@ -102,7 +91,7 @@
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tlpQuery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tlpQuery.Controls.Add(this.lblCardNo, 0, 0);
             this.tlpQuery.Controls.Add(this.txtCardNo, 1, 0);
             this.tlpQuery.Controls.Add(this.lblName, 2, 0);
@@ -116,7 +105,6 @@
             this.tlpQuery.RowCount = 2;
             this.tlpQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tlpQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpQuery.SetColumnSpan(this.txtName, 3);
             this.tlpQuery.Size = new System.Drawing.Size(1020, 104);
             this.tlpQuery.TabIndex = 1;
             // 
@@ -124,45 +112,46 @@
             // 
             this.lblCardNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCardNo.AutoSize = true;
-            this.lblCardNo.Location = new System.Drawing.Point(3, 17);
+            this.lblCardNo.Location = new System.Drawing.Point(12, 16);
             this.lblCardNo.Name = "lblCardNo";
-            this.lblCardNo.Size = new System.Drawing.Size(64, 17);
+            this.lblCardNo.Size = new System.Drawing.Size(69, 20);
             this.lblCardNo.TabIndex = 0;
             this.lblCardNo.Text = "证件号：";
             // 
             // txtCardNo
             // 
             this.txtCardNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCardNo.Location = new System.Drawing.Point(73, 14);
+            this.txtCardNo.Location = new System.Drawing.Point(87, 12);
             this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(348, 25);
+            this.txtCardNo.Size = new System.Drawing.Size(288, 27);
             this.txtCardNo.TabIndex = 1;
             // 
             // lblName
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(424, 17);
+            this.lblName.Location = new System.Drawing.Point(392, 6);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(52, 17);
+            this.lblName.Size = new System.Drawing.Size(39, 40);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "姓名：";
             // 
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(482, 14);
+            this.tlpQuery.SetColumnSpan(this.txtName, 3);
+            this.txtName.Location = new System.Drawing.Point(437, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(535, 25);
+            this.txtName.Size = new System.Drawing.Size(580, 27);
             this.txtName.TabIndex = 3;
             // 
             // lblType
             // 
             this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(3, 69);
+            this.lblType.Location = new System.Drawing.Point(27, 58);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(64, 17);
+            this.lblType.Size = new System.Drawing.Size(54, 40);
             this.lblType.TabIndex = 4;
             this.lblType.Text = "读者类型：";
             // 
@@ -170,9 +159,9 @@
             // 
             this.cboType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboType.Location = new System.Drawing.Point(73, 66);
+            this.cboType.Location = new System.Drawing.Point(87, 66);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(348, 25);
+            this.cboType.Size = new System.Drawing.Size(288, 28);
             this.cboType.TabIndex = 5;
             // 
             // btnQuery
@@ -182,7 +171,7 @@
             this.btnQuery.FlatAppearance.BorderSize = 0;
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuery.ForeColor = System.Drawing.Color.White;
-            this.btnQuery.Location = new System.Drawing.Point(799, 59);
+            this.btnQuery.Location = new System.Drawing.Point(797, 59);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(106, 38);
             this.btnQuery.TabIndex = 6;
@@ -196,12 +185,23 @@
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnReset.Location = new System.Drawing.Point(911, 59);
+            this.btnReset.Location = new System.Drawing.Point(909, 59);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(106, 38);
+            this.btnReset.Size = new System.Drawing.Size(108, 38);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // lblQueryTitle
+            // 
+            this.lblQueryTitle.AutoSize = true;
+            this.lblQueryTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblQueryTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblQueryTitle.Location = new System.Drawing.Point(24, 16);
+            this.lblQueryTitle.Name = "lblQueryTitle";
+            this.lblQueryTitle.Size = new System.Drawing.Size(61, 24);
+            this.lblQueryTitle.TabIndex = 0;
+            this.lblQueryTitle.Text = "查询条";
             // 
             // pnlList
             // 
@@ -230,13 +230,11 @@
             this.dgvReaders.AllowUserToAddRows = false;
             this.dgvReaders.AllowUserToDeleteRows = false;
             this.dgvReaders.AllowUserToResizeRows = false;
-            this.dgvReaders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvReaders.BackgroundColor = System.Drawing.Color.White;
             this.dgvReaders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvReaders.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
@@ -269,8 +267,8 @@
             this.dgvReaders.Name = "dgvReaders";
             this.dgvReaders.ReadOnly = true;
             this.dgvReaders.RowHeadersVisible = false;
+            this.dgvReaders.RowHeadersWidth = 51;
             this.dgvReaders.RowTemplate.Height = 40;
-            this.dgvReaders.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.dgvReaders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReaders.Size = new System.Drawing.Size(1036, 388);
             this.dgvReaders.TabIndex = 0;
@@ -278,6 +276,7 @@
             // colNo
             // 
             this.colNo.HeaderText = "序号";
+            this.colNo.MinimumWidth = 6;
             this.colNo.Name = "colNo";
             this.colNo.ReadOnly = true;
             this.colNo.Width = 62;
@@ -285,6 +284,7 @@
             // colCardNo
             // 
             this.colCardNo.HeaderText = "证件号";
+            this.colCardNo.MinimumWidth = 6;
             this.colCardNo.Name = "colCardNo";
             this.colCardNo.ReadOnly = true;
             this.colCardNo.Width = 130;
@@ -292,6 +292,7 @@
             // colName
             // 
             this.colName.HeaderText = "姓名";
+            this.colName.MinimumWidth = 6;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
             this.colName.Width = 90;
@@ -299,6 +300,7 @@
             // colSex
             // 
             this.colSex.HeaderText = "性别";
+            this.colSex.MinimumWidth = 6;
             this.colSex.Name = "colSex";
             this.colSex.ReadOnly = true;
             this.colSex.Width = 66;
@@ -306,6 +308,7 @@
             // colType
             // 
             this.colType.HeaderText = "类型";
+            this.colType.MinimumWidth = 6;
             this.colType.Name = "colType";
             this.colType.ReadOnly = true;
             this.colType.Width = 80;
@@ -313,6 +316,7 @@
             // colDept
             // 
             this.colDept.HeaderText = "部门\\班级";
+            this.colDept.MinimumWidth = 6;
             this.colDept.Name = "colDept";
             this.colDept.ReadOnly = true;
             this.colDept.Width = 150;
@@ -320,13 +324,14 @@
             // colBorrowable
             // 
             this.colBorrowable.HeaderText = "可借数量";
+            this.colBorrowable.MinimumWidth = 6;
             this.colBorrowable.Name = "colBorrowable";
             this.colBorrowable.ReadOnly = true;
-            this.colBorrowable.Width = 100;
             // 
             // colState
             // 
             this.colState.HeaderText = "状态";
+            this.colState.MinimumWidth = 6;
             this.colState.Name = "colState";
             this.colState.ReadOnly = true;
             this.colState.Width = 84;
@@ -348,7 +353,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.lblTitle.Location = new System.Drawing.Point(18, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(64, 17);
+            this.lblTitle.Size = new System.Drawing.Size(74, 21);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "读者列表";
             // 
@@ -456,6 +461,7 @@
             this.pnlTool.ResumeLayout(false);
             this.flpTool.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

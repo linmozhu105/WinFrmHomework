@@ -28,7 +28,9 @@ namespace WindowsFormsLibrarySystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbFilter = new System.Windows.Forms.GroupBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlFilter = new System.Windows.Forms.Panel();
             this.tlpFilter = new System.Windows.Forms.TableLayoutPanel();
             this.lblDays = new System.Windows.Forms.Label();
             this.numDays = new System.Windows.Forms.NumericUpDown();
@@ -36,84 +38,83 @@ namespace WindowsFormsLibrarySystem
             this.cboType = new System.Windows.Forms.ComboBox();
             this.btnQuery = new System.Windows.Forms.Button();
             this.pnlTool = new System.Windows.Forms.Panel();
-            this.flpTool = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNotify = new System.Windows.Forms.Button();
             this.btnExportList = new System.Windows.Forms.Button();
+            this.pnlGrid = new System.Windows.Forms.Panel();
             this.dgvOverdue = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReaderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCardNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBorrowDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gbFilter.SuspendLayout();
+            this.colFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlFilter.SuspendLayout();
             this.tlpFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDays)).BeginInit();
             this.pnlTool.SuspendLayout();
-            this.flpTool.SuspendLayout();
+            this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverdue)).BeginInit();
             this.SuspendLayout();
             // 
-            // gbFilter
+            // pnlFilter
             // 
-            this.gbFilter.BackColor = System.Drawing.Color.White;
-            this.gbFilter.Controls.Add(this.tlpFilter);
-            this.gbFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbFilter.Location = new System.Drawing.Point(10, 10);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.gbFilter.Size = new System.Drawing.Size(920, 92);
-            this.gbFilter.TabIndex = 0;
-            this.gbFilter.TabStop = false;
-            this.gbFilter.Text = "催还条件";
+            this.pnlFilter.BackColor = System.Drawing.Color.White;
+            this.pnlFilter.Controls.Add(this.tlpFilter);
+            this.pnlFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFilter.Location = new System.Drawing.Point(10, 10);
+            this.pnlFilter.Name = "pnlFilter";
+            this.pnlFilter.Size = new System.Drawing.Size(1060, 120);
+            this.pnlFilter.TabIndex = 0;
             // 
             // tlpFilter
             // 
+            this.tlpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpFilter.ColumnCount = 6;
-            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFilter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tlpFilter.Controls.Add(this.lblDays, 0, 0);
             this.tlpFilter.Controls.Add(this.numDays, 1, 0);
             this.tlpFilter.Controls.Add(this.lblType, 2, 0);
             this.tlpFilter.Controls.Add(this.cboType, 3, 0);
-            this.tlpFilter.Controls.Add(this.btnQuery, 4, 0);
-            this.tlpFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpFilter.Location = new System.Drawing.Point(11, 24);
+            this.tlpFilter.Controls.Add(this.btnQuery, 5, 0);
+            this.tlpFilter.Location = new System.Drawing.Point(26, 34);
             this.tlpFilter.Name = "tlpFilter";
-            this.tlpFilter.Padding = new System.Windows.Forms.Padding(6, 10, 6, 6);
             this.tlpFilter.RowCount = 1;
-            this.tlpFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpFilter.Size = new System.Drawing.Size(898, 56);
+            this.tlpFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tlpFilter.Size = new System.Drawing.Size(1008, 56);
             this.tlpFilter.TabIndex = 0;
             // 
             // lblDays
             // 
-            this.lblDays.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDays.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDays.AutoSize = true;
-            this.lblDays.Location = new System.Drawing.Point(10, 29);
+            this.lblDays.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.lblDays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblDays.Location = new System.Drawing.Point(3, 18);
             this.lblDays.Name = "lblDays";
-            this.lblDays.Size = new System.Drawing.Size(98, 17);
+            this.lblDays.Size = new System.Drawing.Size(74, 19);
             this.lblDays.TabIndex = 0;
-            this.lblDays.Text = "逾期天数≥：";
-            this.lblDays.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDays.Text = "逾期天数";
             // 
             // numDays
             // 
-            this.numDays.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numDays.Location = new System.Drawing.Point(115, 25);
+            this.numDays.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numDays.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.numDays.Location = new System.Drawing.Point(107, 13);
             this.numDays.Maximum = new decimal(new int[] {
             365,
             0,
             0,
             0});
             this.numDays.Name = "numDays";
-            this.numDays.Size = new System.Drawing.Size(90, 25);
+            this.numDays.Size = new System.Drawing.Size(214, 29);
             this.numDays.TabIndex = 1;
             this.numDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.numDays.Value = new decimal(new int[] {
@@ -124,204 +125,225 @@ namespace WindowsFormsLibrarySystem
             // 
             // lblType
             // 
-            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(216, 29);
+            this.lblType.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.lblType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblType.Location = new System.Drawing.Point(327, 18);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(80, 17);
+            this.lblType.Size = new System.Drawing.Size(74, 19);
             this.lblType.TabIndex = 2;
-            this.lblType.Text = "读者类型：";
-            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblType.Text = "读者类型";
             // 
             // cboType
             // 
-            this.cboType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboType.Location = new System.Drawing.Point(305, 25);
+            this.cboType.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cboType.Location = new System.Drawing.Point(423, 13);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(164, 25);
+            this.cboType.Size = new System.Drawing.Size(174, 27);
             this.cboType.TabIndex = 3;
             // 
             // btnQuery
             // 
             this.btnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnQuery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnQuery.FlatAppearance.BorderSize = 0;
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuery.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.btnQuery.ForeColor = System.Drawing.Color.White;
-            this.btnQuery.Location = new System.Drawing.Point(478, 21);
+            this.btnQuery.Location = new System.Drawing.Point(881, 8);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(90, 32);
+            this.btnQuery.Size = new System.Drawing.Size(124, 40);
             this.btnQuery.TabIndex = 4;
             this.btnQuery.Text = "查询";
             this.btnQuery.UseVisualStyleBackColor = false;
             // 
             // pnlTool
             // 
-            this.pnlTool.BackColor = System.Drawing.Color.White;
-            this.pnlTool.Controls.Add(this.flpTool);
+            this.pnlTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
+            this.pnlTool.Controls.Add(this.btnNotify);
+            this.pnlTool.Controls.Add(this.btnExportList);
             this.pnlTool.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTool.Location = new System.Drawing.Point(10, 102);
+            this.pnlTool.Location = new System.Drawing.Point(10, 130);
             this.pnlTool.Name = "pnlTool";
-            this.pnlTool.Size = new System.Drawing.Size(920, 48);
+            this.pnlTool.Size = new System.Drawing.Size(1060, 76);
             this.pnlTool.TabIndex = 1;
-            // 
-            // flpTool
-            // 
-            this.flpTool.Controls.Add(this.btnNotify);
-            this.flpTool.Controls.Add(this.btnExportList);
-            this.flpTool.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpTool.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
-            this.flpTool.Location = new System.Drawing.Point(0, 0);
-            this.flpTool.Name = "flpTool";
-            this.flpTool.Padding = new System.Windows.Forms.Padding(2, 8, 2, 6);
-            this.flpTool.Size = new System.Drawing.Size(920, 48);
-            this.flpTool.TabIndex = 0;
-            this.flpTool.WrapContents = false;
             // 
             // btnNotify
             // 
             this.btnNotify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
             this.btnNotify.FlatAppearance.BorderSize = 0;
             this.btnNotify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotify.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.btnNotify.ForeColor = System.Drawing.Color.White;
-            this.btnNotify.Location = new System.Drawing.Point(5, 11);
+            this.btnNotify.Location = new System.Drawing.Point(24, 16);
             this.btnNotify.Name = "btnNotify";
-            this.btnNotify.Size = new System.Drawing.Size(140, 32);
+            this.btnNotify.Size = new System.Drawing.Size(172, 44);
             this.btnNotify.TabIndex = 0;
-            this.btnNotify.Text = "发送催还通知";
+            this.btnNotify.Text = "✉  发送催还通知";
             this.btnNotify.UseVisualStyleBackColor = false;
             // 
             // btnExportList
             // 
-            this.btnExportList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.btnExportList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
             this.btnExportList.FlatAppearance.BorderSize = 0;
             this.btnExportList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportList.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.btnExportList.ForeColor = System.Drawing.Color.White;
-            this.btnExportList.Location = new System.Drawing.Point(151, 11);
+            this.btnExportList.Location = new System.Drawing.Point(208, 16);
             this.btnExportList.Name = "btnExportList";
-            this.btnExportList.Size = new System.Drawing.Size(148, 32);
+            this.btnExportList.Size = new System.Drawing.Size(156, 44);
             this.btnExportList.TabIndex = 1;
-            this.btnExportList.Text = "导出催还名单";
+            this.btnExportList.Text = "⤓  导出催名单";
             this.btnExportList.UseVisualStyleBackColor = false;
+            // 
+            // pnlGrid
+            // 
+            this.pnlGrid.BackColor = System.Drawing.Color.White;
+            this.pnlGrid.Controls.Add(this.dgvOverdue);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Location = new System.Drawing.Point(10, 206);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 14, 16, 12);
+            this.pnlGrid.Size = new System.Drawing.Size(1060, 484);
+            this.pnlGrid.TabIndex = 2;
             // 
             // dgvOverdue
             // 
             this.dgvOverdue.AllowUserToAddRows = false;
             this.dgvOverdue.AllowUserToDeleteRows = false;
             this.dgvOverdue.AllowUserToResizeRows = false;
-            this.dgvOverdue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOverdue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvOverdue.BackgroundColor = System.Drawing.Color.White;
             this.dgvOverdue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvOverdue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvOverdue.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.dgvOverdue.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.dgvOverdue.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.dgvOverdue.ColumnHeadersHeight = 38;
+            this.dgvOverdue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOverdue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOverdue.ColumnHeadersHeight = 44;
+            this.dgvOverdue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvOverdue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCheck,
+            this.colNo,
+            this.colReaderName,
             this.colCardNo,
-            this.colName,
-            this.colPhone,
             this.colTitle,
-            this.colBorrowDate,
             this.colDueDate,
-            this.colDays});
+            this.colDays,
+            this.colFee,
+            this.colPhone});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(240)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOverdue.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOverdue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOverdue.EnableHeadersVisualStyles = false;
-            this.dgvOverdue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.dgvOverdue.Location = new System.Drawing.Point(10, 150);
+            this.dgvOverdue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(241)))));
+            this.dgvOverdue.Location = new System.Drawing.Point(16, 14);
             this.dgvOverdue.MultiSelect = false;
             this.dgvOverdue.Name = "dgvOverdue";
+            this.dgvOverdue.ReadOnly = true;
             this.dgvOverdue.RowHeadersVisible = false;
-            this.dgvOverdue.RowTemplate.Height = 34;
+            this.dgvOverdue.RowTemplate.Height = 44;
+            this.dgvOverdue.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.dgvOverdue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOverdue.Size = new System.Drawing.Size(920, 450);
-            this.dgvOverdue.TabIndex = 2;
+            this.dgvOverdue.Size = new System.Drawing.Size(1028, 458);
+            this.dgvOverdue.TabIndex = 0;
             // 
-            // colCheck
+            // colNo
             // 
-            this.colCheck.FillWeight = 40F;
-            this.colCheck.HeaderText = "选择";
-            this.colCheck.Name = "colCheck";
+            this.colNo.HeaderText = "序号";
+            this.colNo.Name = "colNo";
+            this.colNo.ReadOnly = true;
+            this.colNo.Width = 62;
+            // 
+            // colReaderName
+            // 
+            this.colReaderName.HeaderText = "读者姓名";
+            this.colReaderName.Name = "colReaderName";
+            this.colReaderName.ReadOnly = true;
+            this.colReaderName.Width = 130;
             // 
             // colCardNo
             // 
-            this.colCardNo.FillWeight = 100F;
-            this.colCardNo.HeaderText = "读者证号";
+            this.colCardNo.HeaderText = "证件号";
             this.colCardNo.Name = "colCardNo";
             this.colCardNo.ReadOnly = true;
-            // 
-            // colName
-            // 
-            this.colName.FillWeight = 80F;
-            this.colName.HeaderText = "姓名";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colPhone
-            // 
-            this.colPhone.FillWeight = 110F;
-            this.colPhone.HeaderText = "联系电话";
-            this.colPhone.Name = "colPhone";
-            this.colPhone.ReadOnly = true;
+            this.colCardNo.Width = 140;
             // 
             // colTitle
             // 
-            this.colTitle.FillWeight = 150F;
             this.colTitle.HeaderText = "书名";
             this.colTitle.Name = "colTitle";
             this.colTitle.ReadOnly = true;
-            // 
-            // colBorrowDate
-            // 
-            this.colBorrowDate.FillWeight = 100F;
-            this.colBorrowDate.HeaderText = "借出日期";
-            this.colBorrowDate.Name = "colBorrowDate";
-            this.colBorrowDate.ReadOnly = true;
+            this.colTitle.Width = 220;
             // 
             // colDueDate
             // 
-            this.colDueDate.FillWeight = 100F;
             this.colDueDate.HeaderText = "应还日期";
             this.colDueDate.Name = "colDueDate";
             this.colDueDate.ReadOnly = true;
+            this.colDueDate.Width = 140;
             // 
             // colDays
             // 
-            this.colDays.FillWeight = 80F;
             this.colDays.HeaderText = "逾期天数";
             this.colDays.Name = "colDays";
             this.colDays.ReadOnly = true;
+            this.colDays.Width = 110;
+            // 
+            // colFee
+            // 
+            this.colFee.HeaderText = "逾期费用";
+            this.colFee.Name = "colFee";
+            this.colFee.ReadOnly = true;
+            this.colFee.Width = 110;
+            // 
+            // colPhone
+            // 
+            this.colPhone.HeaderText = "联系方式";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.ReadOnly = true;
+            this.colPhone.Width = 150;
             // 
             // FrmOverdue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(940, 620);
-            this.Controls.Add(this.dgvOverdue);
+            this.ClientSize = new System.Drawing.Size(1080, 700);
+            this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlTool);
-            this.Controls.Add(this.gbFilter);
+            this.Controls.Add(this.pnlFilter);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MinimumSize = new System.Drawing.Size(820, 520);
+            this.MinimumSize = new System.Drawing.Size(820, 560);
             this.Name = "FrmOverdue";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "逾期催还";
-            this.gbFilter.ResumeLayout(false);
+            this.pnlFilter.ResumeLayout(false);
             this.tlpFilter.ResumeLayout(false);
             this.tlpFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDays)).EndInit();
             this.pnlTool.ResumeLayout(false);
-            this.flpTool.ResumeLayout(false);
+            this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverdue)).EndInit();
             this.ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbFilter;
+        private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.TableLayoutPanel tlpFilter;
         private System.Windows.Forms.Label lblDays;
         private System.Windows.Forms.NumericUpDown numDays;
@@ -329,17 +351,17 @@ namespace WindowsFormsLibrarySystem
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.Panel pnlTool;
-        private System.Windows.Forms.FlowLayoutPanel flpTool;
         private System.Windows.Forms.Button btnNotify;
         private System.Windows.Forms.Button btnExportList;
+        private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.DataGridView dgvOverdue;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReaderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCardNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBorrowDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDays;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
     }
 }
