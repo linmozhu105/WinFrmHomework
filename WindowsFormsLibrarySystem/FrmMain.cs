@@ -61,11 +61,22 @@ namespace WindowsFormsLibrarySystem
         private void mnuChangePwd_Click(object sender, EventArgs e)
         {
             // TODO: 打开修改密码对话框（ShowDialog）
+            using (FrmChangePwd dlg = new FrmChangePwd())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("密码修改成功，请重新登录。", "提示");
+                }
+            }
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
         {
             // TODO: 确认后退出程序
+            if (MessageBox.Show("确定要退出系统吗？", "退出",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         #endregion
@@ -173,7 +184,7 @@ namespace WindowsFormsLibrarySystem
 
         private void tsbSetting_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         #endregion
